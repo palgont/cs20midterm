@@ -28,10 +28,9 @@ nav a:hover{
         color:#fff;
 }
 #below_nav{ 
-    margin-bottom: 50px;
     width: 100%;
     background-color: #000;
-    height: 4px;
+    height: 0.5px;
 }
 
 footer {
@@ -63,11 +62,7 @@ h1 {
         color: #fff;
 }
 
-section { 
-    height:400px ;
-}
 
 section img { 
-    border: 2px solid black; 
     width : 100%;
 }
