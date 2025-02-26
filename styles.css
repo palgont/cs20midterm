@@ -56,10 +56,12 @@ footer p a:hover{
 #img_container  img { 
     display: block;
 } */
-h1 {
+h2 {
         font-size: 45px;
         text-align: center;
         color: #fff;
+        padding: 0px;
+        margin: 0px;
 }
 
 
