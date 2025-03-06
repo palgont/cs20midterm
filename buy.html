@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- URL: http://localhost:5500/midterm/index.html -->
+        <title>Buy Housing</title>
+        <!-- Link to external style sheet -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- For JQuery usage -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+        <!--Font Style-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+        <!-- For responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- JavaScript -->
+        <script>
+            fetch('./house_data.json')
+                .then (response => response.json())
+                .then (data => displayHouses(data.houses))
+                .catch (error => console.log(error))
+            
+            function displayHouses(houses) {
+                const houseListings = document.getElementById('house-listings');
+                houseListings.innerHTML = ""; // Clear existing content
+
+                houses.forEach(house => {
+                    const houseCard = document.createElement('div');
+                    houseCard.classList.add('house-card');
+
+                    houseCard.innerHTML = `
+                        <h2>${house.name}</h2>
+                        <p><strong>Price:</strong> $${house.price}</p>
+                        <p><strong>Location:</strong> ${house.address.street}, ${house.address.city}, ${house.address.state}</p>
+                        <p><strong>Rooms:</strong> ${house.bedrooms} bedroom, ${house.bathrooms} bathroom, ${house.squareFeet} squareFeet</p>
+                        <p><strong>Amenities:</strong> ${house.amenities} </p>
+                        <img src="${house.image}" alt="${house.name}" width="200">
+                        <hr>
+                    `;
+
+                    houseListings.appendChild(houseCard);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <a href="index.html">
+                <div id = "img_container">
+                    <img id="logo" src="house_logo.png">
+                </div>
+            </a>
+            <h2 class="title">PropertyPath</h2>
+        </header>
+        <!-- Navagation Bar -->
+        <nav>
+            <a href="index.html">Home </a>
+            <a href="buy.html">Buy </a>
+            <a href="rent.html">Rent</a>
+            <a href="sell.html">Sell</a>
+            <a href="agents.html">Agents</a>
+            <a href="qanda.html">Q/A</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div id = "below_nav"></div>
+        <!-- Page Content -->
+        <section>
+            <h1 style="font-size: 40px; text-align: center;">Houses for Sale</h1>
+            <div id="house-listings"></div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
+                &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
+        </footer>
+    </body>
+</html>
+

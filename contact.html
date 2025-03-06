@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- URL: http://localhost:5500/midterm/index.html -->
+        <title>PropertyPath</title>
+        <!-- Link to external style sheet -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- For JQuery usage -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+        <!--Font Style-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+        <!-- For responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            section { 
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                margin: 0px auto;
+
+            }
+
+            .overlay { 
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: black;
+                width: 100%;
+                height: 100%; 
+            }
+            .contact_form { 
+                display: flex;
+                position: absolute;
+                top : 20px;
+                width: 100%;
+                justify-content: center;
+                /* display: none; */
+            }
+            .input { 
+                text-align: center;
+                margin: 10px 0px;
+                width : 500px;
+                height: 50px;
+                border-radius: 10px;
+                padding: 8px;
+            }
+            #note {  
+                height: 100px;
+                text-align: center;
+                margin: 10px 0px;
+                width : 500px;
+                border-radius: 10px;
+                padding: 8px;
+                white-space: pre-wrap;
+            }
+            #submit_btn { 
+                width : 150px;
+                justify-content: center;
+                height: 50px;
+                border-radius: 10px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <a href="index.html">
+                <div id = "img_container">
+                    <img id="logo" src="house_logo.png">
+                </div>
+            </a>
+            <h1>PropertyPath</h1>
+        </header>
+        <!-- Navagation Bar -->
+        <nav>
+            <a href="index.html">Home </a>
+            <a href="buy.html">Buy </a>
+            <a href="rent.html">Rent</a>
+            <a href="sell.html">Sell</a>
+            <a href="agents.html">Agents</a>
+            <a href="qanda.html">Q/A</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div id = "below_nav"></div>
+        <section>
+            <div class="overlay">
+            </div>
+            <img src="contact_bg.jpg" alt="">
+            <div class="contact_form">
+                <form action="#">
+                    <input class = "input" type="text" placeholder="Enter your name"> <br>
+                    <input class = "input" type="text" placeholder="Enter your contact"> <br>
+                    <textarea class = "input" id = "note" placeholder="Enter your note"></textarea> 
+                    <div class = "input">
+                        <input type="submit" id="submit_btn">
+                    </div>
+                   
+
+                </form>
+
+            </div>
+        </section>
+        <script>
+            document.getElementById()
+        </script>
+        <!-- Footer -->
+        <footer>
+            <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
+                &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
+        </footer>
+    </body>
+</html>
+
