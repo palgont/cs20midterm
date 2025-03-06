@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PropertyPath</title>
+        <!-- Link to external style sheet -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- For JQuery usage -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+        <!--Font Style-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+        <!-- For responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .form-container {
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 20px;
+                font-family: "Open Sans", sans-serif;
+                background: #f8f8f8;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .form-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .form-group {
+                margin-bottom: 15px;
+            }
+    
+            .form-group label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+    
+            .form-group input, .form-group select {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            .btn {
+                width: 100%;
+                background-color: #50affd;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+    
+            .btn:hover {
+                background-color: #008cba;
+            }
+    
+            #estimate {
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+        <!-- Header -->
+        <header>
+            <a href="index.html">
+                <div id = "img_container">
+                    <img id="logo" src="images/house_logo.png">
+                </div>
+            </a>
+            <span id="title">PropertyPath</span>
+        </header>
+        <!-- Navagation Bar -->
+        <nav>
+            <a href="index.html">Home </a>
+            <a href="buy.html">Buy </a>
+            <a href="rent.html">Rent</a>
+            <a href="sell.html">Sell</a>
+            <a href="agents.html">Agents</a>
+            <a href="qanda.html">Q/A</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div id = "below_nav"></div>
+        <section class="form-container">
+            <h2>Get an Estimate for Your Property</h2>
+            <form id="sellForm">
+                <div class="form-group">
+                    <label for="year">Year Built:</label>
+                    <input type="number" id="year" name="year" min="1800" max="2025" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="bedrooms">Bedrooms:</label>
+                    <input type="number" id="bedrooms" name="bedrooms" min="1" max="10" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="bathrooms">Bathrooms:</label>
+                    <input type="number" id="bathrooms" name="bathrooms" min="1" max="10" step="0.5" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <select id="location" name="location" required>
+                        <option value="urban">Urban</option>
+                        <option value="suburban">Suburban</option>
+                        <option value="rural">Rural</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="condition">House Condition:</label>
+                    <select id="condition" name="condition" required>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+    
+                <button type="button" class="btn" id="estimateBtn">Get Estimate</button>
+            </form>
+    
+            <div id="estimate"></div>
+        </section>
+    </div>
+        <!-- Footer -->
+        <footer>
+            <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
+                &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
+        </footer>
+        <!-- jQuery Script to Calculate Estimate -->
+    <script>
+        $(document).ready(function() {
+            $("#estimateBtn").click(function() {
+                let year = parseInt($("#year").val());
+                let bedrooms = parseInt($("#bedrooms").val());
+                let bathrooms = parseFloat($("#bathrooms").val());
+                let location = $("#location").val();
+                let condition = $("#condition").val();
+
+                if (!year || !bedrooms || !bathrooms || !location || !condition) {
+                    $("#estimate").html("Please fill in all fields.");
+                    return;
+                }
+
+                // Base price
+                let basePrice = 50000 + (bedrooms * 30000) + (bathrooms * 20000);
+
+                // Adjust based on year built (older homes are cheaper)
+                let ageFactor = Math.max(0.5, 1 - ((2025 - year) * 0.005));
+                const currentYear = new Date().getFullYear();
+                if (year > currentYear) {
+                    $("#estimate").html("Invalid Year");
+                    return;
+                }
+                basePrice *= ageFactor;
+
+                // Adjust based on location
+                let locationFactor = (location == "urban") ? 2.0 : (location == "suburban" ? 1.2 : 0.9);
+                basePrice *= locationFactor;
+
+                // Adjust based on condition
+                let conditionFactor = (condition == "excellent") ? 1.2 : (condition == "good") ? 1 : (condition === "fair") ? 0.8 : 0.6;
+                basePrice *= conditionFactor;
+
+                // Format the price and display
+                let formattedPrice = basePrice.toLocaleString("en-US", { style: "currency", currency: "USD" });
+                $("#estimate").html(`Estimated Price: <strong>${formattedPrice}</strong>`);
+            });
+        });
+    </script>
+    </div>
+    </body>
+</html>

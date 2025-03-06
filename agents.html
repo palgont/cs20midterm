@@ -1,0 +1,249 @@
+<html><head>
+        <title>PropertyPath</title>
+        <!-- Link to external style sheet -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- For JQuery usage -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!--Font Style-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+        <!-- For responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Internal Stylesheet -->
+    <style>
+        header {
+            width:100%;
+        }
+        h1 {
+            color: #000;
+            font-size: 35px;
+            font-family: "Open Sans"
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        #agents_section {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+        
+        #agents_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+    
+        .agent_card {
+            background: #f8f8f8;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+    
+        .agent_card:hover {
+            transform: translateY(-5px);
+        }
+    
+        .agent_card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+    
+        .agent_card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    
+        .agent_card p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    
+        .agent_card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    
+        .agent_card a:hover {
+            text-decoration: underline;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="wrapper">
+        <div class="content">
+        <!-- Header -->
+        <header>
+            <a href="index.html">
+                <div id="img_container">
+                    <img id="logo" src="images/house_logo.png">
+                </div>
+            </a>
+            <span id="title">PropertyPath</span>
+        </header>
+        <!-- Navagation Bar -->
+        <nav>
+            <a href="index.html">Home </a>
+            <a href="buy.html">Buy </a>
+            <a href="rent.html">Rent</a>
+            <a href="sell.html">Sell</a>
+            <a href="agents.html">Agents</a>
+            <a href="qanda.html">Q/A</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div id="below_nav"></div>
+            <section id="agents_section">
+                <h1>Meet Our Agents</h1>
+                <div id="agents_container">
+                            <div class="agent_card">
+                                <img src="images/agents/agent1.jpg" alt="Ada Ugwu">
+                                <h3>Ada Ugwu</h3>
+                                <p><strong>Location:</strong> New York, NY</p>
+                                <p><strong>Phone:</strong> (123) 456-7890</p>
+                                <p><strong>Email:</strong> <a href="mailto:adaugwu@example.com">adaugwu@example.com</a></p>
+                                <p><strong>Experience:</strong> 10 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent2.jpg" alt="Wardell James">
+                                <h3>Wardell James</h3>
+                                <p><strong>Location:</strong> Los Angeles, CA</p>
+                                <p><strong>Phone:</strong> (987) 654-3210</p>
+                                <p><strong>Email:</strong> <a href="mailto:wardelljames@example.com">wardelljames@example.com</a></p>
+                                <p><strong>Experience:</strong> 8 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent3.jpg" alt="Bob Johnson">
+                                <h3>Bob Johnson</h3>
+                                <p><strong>Location:</strong> Chicago, IL</p>
+                                <p><strong>Phone:</strong> (555) 123-4567</p>
+                                <p><strong>Email:</strong> <a href="mailto:bobjohnson@example.com">bobjohnson@example.com</a></p>
+                                <p><strong>Experience:</strong> 12 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent4.png" alt="Emily White">
+                                <h3>Emily White</h3>
+                                <p><strong>Location:</strong> Houston, TX</p>
+                                <p><strong>Phone:</strong> (444) 567-8901</p>
+                                <p><strong>Email:</strong> <a href="mailto:emilywhite@example.com">emilywhite@example.com</a></p>
+                                <p><strong>Experience:</strong> 9 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent5.png" alt="Clark Kent">
+                                <h3>Clark Kent</h3>
+                                <p><strong>Location:</strong> Phoenix, AZ</p>
+                                <p><strong>Phone:</strong> (333) 678-9012</p>
+                                <p><strong>Email:</strong> <a href="mailto:clarkkent@example.com">clarkkent@example.com</a></p>
+                                <p><strong>Experience:</strong> 15 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent6.png" alt="Thomas Trane">
+                                <h3>Thomas Trane</h3>
+                                <p><strong>Location:</strong> Philadelphia, PA</p>
+                                <p><strong>Phone:</strong> (222) 789-0123</p>
+                                <p><strong>Email:</strong> <a href="mailto:thomastrane@example.com">thomastrane@example.com</a></p>
+                                <p><strong>Experience:</strong> 7 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent7.png" alt="Shavkat Rakhmonov">
+                                <h3>Shavkat Rakhmonov</h3>
+                                <p><strong>Location:</strong> San Antonio, TX</p>
+                                <p><strong>Phone:</strong> (111) 890-1234</p>
+                                <p><strong>Email:</strong> <a href="mailto:shavkatrakhmonov@example.com">shavkatrakhmonov@example.com</a></p>
+                                <p><strong>Experience:</strong> 14 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent8.png" alt="Olivia Martinez">
+                                <h3>Olivia Martinez</h3>
+                                <p><strong>Location:</strong> San Diego, CA</p>
+                                <p><strong>Phone:</strong> (666) 901-2345</p>
+                                <p><strong>Email:</strong> <a href="mailto:oliviamartinez@example.com">oliviamartinez@example.com</a></p>
+                                <p><strong>Experience:</strong> 11 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent9.png" alt="Plai Cede">
+                                <h3>Plai Cede</h3>
+                                <p><strong>Location:</strong> Dallas, TX</p>
+                                <p><strong>Phone:</strong> (777) 012-3456</p>
+                                <p><strong>Email:</strong> <a href="mailto:plaicede@example.com">plaicede@example.com</a></p>
+                                <p><strong>Experience:</strong> 6 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent10.png" alt="Ana Ise">
+                                <h3>Ana Ise</h3>
+                                <p><strong>Location:</strong> San Jose, CA</p>
+                                <p><strong>Phone:</strong> (888) 123-4567</p>
+                                <p><strong>Email:</strong> <a href="mailto:anaise@example.com">anaise@example.com</a></p>
+                                <p><strong>Experience:</strong> 13 years</p>
+                            </div>
+                        </div>
+            </section>
+    
+            <script>
+                $(document).ready(function() {
+                    let agents = [
+                        { name: "Ada Ugwu", location: "New York, NY", phone: "(123) 456-7890", email: "adaugwu@example.com", experience: "10 years", image: "images/agents/agent1.jpg" },
+                        { name: "Wardell James", location: "Los Angeles, CA", phone: "(987) 654-3210", email: "wardelljames@example.com", experience: "8 years", image: "images/agents/agent2.jpg" },
+                        { name: "Bob Johnson", location: "Chicago, IL", phone: "(555) 123-4567", email: "bobjohnson@example.com", experience: "12 years", image: "images/agents/agent3.jpg" },
+                        { name: "Emily White", location: "Houston, TX", phone: "(444) 567-8901", email: "emilywhite@example.com", experience: "9 years", image: "images/agents/agent4.png" },
+                        { name: "Clark Kent", location: "Phoenix, AZ", phone: "(333) 678-9012", email: "clarkkent@example.com", experience: "15 years", image: "images/agents/agent5.png" },
+                        { name: "Thomas Trane", location: "Philadelphia, PA", phone: "(222) 789-0123", email: "thomastrane@example.com", experience: "7 years", image: "images/agents/agent6.png" },
+                        { name: "Shavkat Rakhmonov", location: "San Antonio, TX", phone: "(111) 890-1234", email: "shavkatrakhmonov@example.com", experience: "14 years", image: "images/agents/agent7.png" },
+                        { name: "Olivia Martinez", location: "San Diego, CA", phone: "(666) 901-2345", email: "oliviamartinez@example.com", experience: "11 years", image: "images/agents/agent8.png" },
+                        { name: "Plai Cede", location: "Dallas, TX", phone: "(777) 012-3456", email: "plaicede@example.com", experience: "6 years", image: "images/agents/agent9.png" },
+                        { name: "Ana Ise", location: "San Jose, CA", phone: "(888) 123-4567", email: "anaise@example.com", experience: "13 years", image: "images/agents/agent10.png" }
+                    ];
+    
+                    let agentsHTML = "";
+                    agents.forEach(agent => {
+                        agentsHTML += `
+                            <div class="agent_card">
+                                <img src="${agent.image}" alt="${agent.name}">
+                                <h3>${agent.name}</h3>
+                                <p><strong>Location:</strong> ${agent.location}</p>
+                                <p><strong>Phone:</strong> ${agent.phone}</p>
+                                <p><strong>Email:</strong> <a href="mailto:${agent.email}">${agent.email}</a></p>
+                                <p><strong>Experience:</strong> ${agent.experience}</p>
+                            </div>
+                        `;
+                    });
+                        
+                    $("#agents_container").html(agentsHTML);
+                });
+            </script>
+        <section>
+            <!-- <img src="images/house_bg.jpg" alt=""> -->
+        </section>
+    </div> 
+        <!-- Footer -->
+        <footer>
+            <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
+                &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
+        </footer>
+    </div>
+    
+
+
+</body></html>
+
