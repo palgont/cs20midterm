@@ -10,7 +10,8 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous"></script>
         <!--Font Style-->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,
+        wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
         <!-- For responsiveness -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,13 +85,18 @@
                 background-color: #008cba;
                 
             }
+            .img { 
+                width: 400px;
+                height: 300px;
+            }
 
             /* @media () */
 
-        </style>
-        
+        </style>        
     </head>
     <body>
+     
+        
         <!-- Header -->
         <header>
             <a href="index.html">
@@ -113,11 +119,13 @@
         </nav>
         <div id = "below_nav"></div>
         <section id="first">
+            
             <div id="sidebar">
                 <div id="in_sidebar">
                     <input type="text" placeholder="Price range" id="price_rng">
                     <input type="text" placeholder="# Bedrooms" id="num_bdrms">
                     <input type="text" placeholder="# Stories" id="num_stories">
+                    <input type="text" placeholder="Location" id="location">
                     <!-- <div>  -->
                     <select name="Rental period" id="rntl_prd">
                         <option value="#"> Rental Period</option>
@@ -131,17 +139,41 @@
 
             </div>
             <div id="main">
-                <div>
+                <p>Here</p>
+                <!-- <div>
+                    <img src="./images/hs2.jpg" alt="">
 
-                </div>
-
-
+                </div> -->
             </div>
+            <script>
+                $(document).ready(function(){ 
+                    var img_arr = [ "rm1.jpg", "hs2.jpg", "bthrm1.jpg"]
+    
+                    genDiv = $('<div>').attr('id',"house_gllry")
+        
+                    for (var i = 0; i < img_arr.length; i++) { 
+                        var newDiv = $('<div>')
+                        var img  = $('<img>').attr('src', './images/'+ img_arr[i]);
+                        img.addClass("img");
+                        newDiv.append(img);
+                        genDiv.append(newDiv)
+                        
+                    }
+                    console.log(genDiv.html());
+
+                    $("#main").append(genDiv)
+                    var main_content = $("main").html();
+                    console.log(main_content);
+                })
+                
+            </script>
         </section>
+
         <!-- Footer -->
         <footer>
             <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
-                &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
+                &nbsp; <a href="mailto:propertypath@gmail.com">
+                    propertypath@gmail.com</a></p>
         </footer>
     </body>
 </html>
