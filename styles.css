@@ -20,7 +20,9 @@ header {
     display: flex;
 }
 h1 {
-    color: #fff;
+    color: #000;
+    font-size: 35px;
+    font-family: "Open Sans"
 }
 nav {
         font-size: 20px;
@@ -61,8 +63,9 @@ footer p a:hover{
         color:#bdb8b8b0;
 }
 
-#title {
+#title{
         font-size: 40px;
+        font-family: arial;
         text-align: center;
         color: #fff;
         Padding:0;

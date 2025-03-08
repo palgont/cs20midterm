@@ -8,8 +8,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1800,
-        "amenities": ["pool", " fireplace", " garden"],
-        "img" : "house1.jpg"
+        "amenities": ["pool", "fireplace", "garden"],
+        "image": "images/Houses/house1.jpg"
       },
       {
         "id": 2,
@@ -19,8 +19,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2200,
-        "amenities": ["balcony", " hardwood floors"],
-        "img" : "hs2.jpg"
+        "amenities": ["balcony", "hardwood floors"],
+        "image": "images/Houses/house2.jpg"
       },
       {
         "id": 3,
@@ -30,8 +30,8 @@
         "bedrooms": 5,
         "bathrooms": 4,
         "squareFeet": 3000,
-        "amenities": ["beachfront", " solar panels", " home theater"],
-        "img" : "hs2.jpg"
+        "amenities": ["beachfront", "solar panels", "home theater"],
+        "image": "images/Houses/house3.png"
       },
       {
         "id": 4,
@@ -41,7 +41,8 @@
         "bedrooms": 2,
         "bathrooms": 2,
         "squareFeet": 1400,
-        "amenities": ["rooftop terrace", "smart home features"]
+        "amenities": ["rooftop terrace", "smart home features"],
+        "image": "images/Houses/house4.png"
       },
       {
         "id": 5,
@@ -52,7 +53,7 @@
         "bathrooms": 1,
         "squareFeet": 1200,
         "amenities": ["gym", "concierge service"],
-        "img" : "hs2.jpg"
+        "image": "images/Houses/house5.png"
       },
       {
         "id": 6,
@@ -62,7 +63,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1900,
-        "amenities": ["deck", "energy-efficient appliances"]
+        "amenities": ["deck", "energy-efficient appliances"],
+        "image": "images/Houses/house6.png"
       },
       {
         "id": 7,
@@ -73,7 +75,7 @@
         "bathrooms": 3,
         "squareFeet": 2500,
         "amenities": ["mountain view", "heated floors"],
-        "img" : "hs2.jpg"
+        "image": "images/Houses/house7.png"
       },
       {
         "id": 8,
@@ -83,7 +85,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1700,
-        "amenities": ["outdoor kitchen", "fire pit"]
+        "amenities": ["outdoor kitchen", "fire pit"],
+        "image": "images/Houses/house8.png"
       },
       {
         "id": 9,
@@ -93,7 +96,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1600,
-        "amenities": ["community pool", "clubhouse"]
+        "amenities": ["community pool", "clubhouse"],
+        "image": "images/Houses/house9.png"
       },
       {
         "id": 10,
@@ -103,7 +107,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2300,
-        "amenities": ["sauna", "private garden"]
+        "amenities": ["sauna", "private garden"],
+        "image": "images/Houses/house10.png"
       },
       {
         "id": 11,
@@ -113,7 +118,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2200,
-        "amenities": ["game room", "fenced yard"]
+        "amenities": ["game room", "fenced yard"],
+        "image": "images/Houses/house11.png"
       },
       {
         "id": 12,
@@ -123,7 +129,8 @@
         "bedrooms": 5,
         "bathrooms": 4,
         "squareFeet": 3200,
-        "amenities": ["home office", "guest house"]
+        "amenities": ["home office", "guest house"],
+        "image": "images/Houses/house12.png"
       },
       {
         "id": 13,
@@ -133,7 +140,8 @@
         "bedrooms": 2,
         "bathrooms": 2,
         "squareFeet": 1500,
-        "amenities": ["music studio", "pet-friendly"]
+        "amenities": ["music studio", "pet-friendly"],
+        "image": "images/Houses/house13.png"
       },
       {
         "id": 14,
@@ -143,7 +151,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2800,
-        "amenities": ["wine cellar", "home gym"]
+        "amenities": ["wine cellar", "home gym"],
+        "image": "images/Houses/house14.png"
       },
       {
         "id": 15,
@@ -153,7 +162,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 2000,
-        "amenities": ["solar panels", "large backyard"]
+        "amenities": ["solar panels", "large backyard"],
+        "image": "images/Houses/house15.png"
       },
       {
         "id": 16,
@@ -163,7 +173,8 @@
         "bedrooms": 2,
         "bathrooms": 2,
         "squareFeet": 1400,
-        "amenities": ["heated garage", "smart home system"]
+        "amenities": ["heated garage", "smart home system"],
+        "image": "images/Houses/house16.png"
       },
       {
         "id": 17,
@@ -173,7 +184,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2400,
-        "amenities": ["fire pit", "open floor plan"]
+        "amenities": ["fire pit", "open floor plan"],
+        "image": "images/Houses/house17.png"
       },
       {
         "id": 18,
@@ -183,7 +195,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1700,
-        "amenities": ["rooftop deck", "walk-in closets"]
+        "amenities": ["rooftop deck", "walk-in closets"],
+        "image": "images/Houses/house18.png"
       },
       {
         "id": 19,
@@ -193,7 +206,8 @@
         "bedrooms": 3,
         "bathrooms": 2.5,
         "squareFeet": 2100,
-        "amenities": ["home office", "two-car garage"]
+        "amenities": ["home office", "two-car garage"],
+        "image": "images/Houses/house19.png"
       },
       {
         "id": 20,
@@ -203,7 +217,8 @@
         "bedrooms": 2,
         "bathrooms": 2,
         "squareFeet": 1350,
-        "amenities": ["gated community", "community pool"]
+        "amenities": ["gated community", "community pool"],
+        "image": "images/Houses/house20.png"
       },
       
       {
@@ -214,7 +229,8 @@
         "bedrooms": 2,
         "bathrooms": 1,
         "squareFeet": 1200,
-        "amenities": ["balcony", "gym", "pet-friendly"]
+        "amenities": ["balcony", "gym", "pet-friendly"],
+        "image": "images/Houses/house21.png"
       },
 
       {
@@ -225,7 +241,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2500,
-        "amenities": ["garage", "backyard", "fire pit"]
+        "amenities": ["garage", "backyard", "fire pit"],
+        "image": "images/Houses/house22.png"
       },
       {
         "id": 23,
@@ -235,7 +252,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1500,
-        "amenities": ["rooftop access", "doorman", "modern kitchen"]
+        "amenities": ["rooftop access", "doorman", "modern kitchen"],
+        "image": "images/Houses/house23.png"
       },
       {
         "id": 24,
@@ -245,7 +263,8 @@
         "bedrooms": 5,
         "bathrooms": 4,
         "squareFeet": 3000,
-        "amenities": ["pool", "deck", "home office"]
+        "amenities": ["pool", "deck", "home office"],
+        "image": "images/Houses/house24.png"
       },
       {
         "id": 25,
@@ -255,7 +274,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1800,
-        "amenities": ["garden", "shed", "patio"]
+        "amenities": ["garden", "shed", "patio"],
+        "image": "images/Houses/house25.png"
       },
       {
         "id": 26,
@@ -265,7 +285,8 @@
         "bedrooms": 2,
         "bathrooms": 2,
         "squareFeet": 1300,
-        "amenities": ["fireplace", "mountain view", "community pool"]
+        "amenities": ["fireplace", "mountain view", "community pool"],
+        "image": "images/Houses/house26.png"
       },
       {
         "id": 27,
@@ -275,7 +296,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2600,
-        "amenities": ["finished basement", "sunroom", "hardwood floors"]
+        "amenities": ["finished basement", "sunroom", "hardwood floors"],
+        "image": "images/Houses/house27.png"
       },
       {
         "id": 29,
@@ -285,7 +307,8 @@
         "bedrooms": 2,
         "bathrooms": 2,
         "squareFeet": 1100,
-        "amenities": ["gym", "concierge", "city view"]
+        "amenities": ["gym", "concierge", "city view"],
+        "image": "images/Houses/house29.png"
       },
       {
         "id": 30,
@@ -295,69 +318,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1900,
-        "amenities": ["garage", "garden", "solar panels"]
-      },
-      {
-        "id": 31,
-        "sellOrRent": "sell",
-        "address": { "street": "654 Ash Blvd", "city": "Atlanta", "state": "GA", "zip": "30303" },
-        "price": 400000,
-        "bedrooms": 3,
-        "bathrooms": 2,
-        "squareFeet": 1700,
-        "amenities": ["deck", "fireplace", "security system"]
-      },
-      {
-        "id": 32,
-        "sellOrRent": "rent",
-        "address": { "street": "987 Redwood St", "city": "Philadelphia", "state": "PA", "zip": "19103" },
-        "price": 3200,
-        "bedrooms": 2,
-        "bathrooms": 1,
-        "squareFeet": 1000,
-        "amenities": ["balcony", "in-unit laundry", "central air"]
-      },
-      {
-        "id": 33,
-        "sellOrRent": "sell",
-        "address": { "street": "123 Cypress Ln", "city": "Phoenix", "state": "AZ", "zip": "85001" },
-        "price": 650000,
-        "bedrooms": 4,
-        "bathrooms": 3,
-        "squareFeet": 2400,
-        "amenities": ["pool", "covered patio", "energy-efficient appliances"]
-      },
-      {
-        "id": 34,
-        "sellOrRent": "sell",
-        "address": { "street": "456 Palm Dr", "city": "Houston", "state": "TX", "zip": "77002" },
-        "price": 450000,
-        "bedrooms": 3,
-        "bathrooms": 2,
-        "squareFeet": 1850,
-        "amenities": ["garage", "fenced yard", "home office"]
-      },
-      {
-        "id": 35,
-        "sellOrRent": "rent",
-        "address": { "street": "789 Fir St", "city": "San Diego", "state": "CA", "zip": "92101" },
-        "price": 3800,
-        "bedrooms": 2,
-        "bathrooms": 2,
-        "squareFeet": 1250,
-        "amenities": ["rooftop terrace", "gym", "ocean view"]
-      },
-      {
-        "id": 36,
-        "sellOrRent": "sell",
-        "address": { "street": "321 Alder Ave", "city": "Dallas", "state": "TX", "zip": "75201" },
-        "price": 500000,
-        "bedrooms": 3,
-        "bathrooms": 2,
-        "squareFeet": 2000,
-        "amenities": ["deck", "hardwood floors", "modern kitchen"]
+        "amenities": ["garage", "garden", "solar panels"],
+        "image": "images/Houses/house30.png"
       }
-      
-      
     ]
   }
