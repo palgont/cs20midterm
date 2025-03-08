@@ -19,7 +19,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2200,
-        "amenities": ["balcony", " hardwood floors"]
+        "amenities": ["balcony", " hardwood floors"],
+        "img" : "hs2.jpg"
       },
       {
         "id": 3,
@@ -29,7 +30,8 @@
         "bedrooms": 5,
         "bathrooms": 4,
         "squareFeet": 3000,
-        "amenities": ["beachfront", " solar panels", " home theater"]
+        "amenities": ["beachfront", " solar panels", " home theater"],
+        "img" : "hs2.jpg"
       },
       {
         "id": 4,
@@ -49,7 +51,8 @@
         "bedrooms": 2,
         "bathrooms": 1,
         "squareFeet": 1200,
-        "amenities": ["gym", "concierge service"]
+        "amenities": ["gym", "concierge service"],
+        "img" : "hs2.jpg"
       },
       {
         "id": 6,
@@ -69,7 +72,8 @@
         "bedrooms": 4,
         "bathrooms": 3,
         "squareFeet": 2500,
-        "amenities": ["mountain view", "heated floors"]
+        "amenities": ["mountain view", "heated floors"],
+        "img" : "hs2.jpg"
       },
       {
         "id": 8,
