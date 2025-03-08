@@ -29,6 +29,176 @@
         "bathrooms": 4,
         "squareFeet": 3000,
         "amenities": ["beachfront", " solar panels", " home theater"]
+      },
+      {
+        "id": 4,
+        "sellOrRent": "sell",
+        "address": { "street": "101 Pine St", "city": "San Francisco", "state": "CA", "zip": "94101" },
+        "price": 950000,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1400,
+        "amenities": ["rooftop terrace", "smart home features"]
+      },
+      {
+        "id": 5,
+        "sellOrRent": "rent",
+        "address": { "street": "202 Maple Ave", "city": "Chicago", "state": "IL", "zip": "60601" },
+        "price": 2800,
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "squareFeet": 1200,
+        "amenities": ["gym", "concierge service"]
+      },
+      {
+        "id": 6,
+        "sellOrRent": "sell",
+        "address": { "street": "303 Birch Rd", "city": "Seattle", "state": "WA", "zip": "98101" },
+        "price": 620000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1900,
+        "amenities": ["deck", "energy-efficient appliances"]
+      },
+      {
+        "id": 7,
+        "sellOrRent": "rent",
+        "address": { "street": "404 Cedar Ln", "city": "Denver", "state": "CO", "zip": "80201" },
+        "price": 3200,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2500,
+        "amenities": ["mountain view", "heated floors"]
+      },
+      {
+        "id": 8,
+        "sellOrRent": "sell",
+        "address": { "street": "505 Oak Dr", "city": "Phoenix", "state": "AZ", "zip": "85001" },
+        "price": 400000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1700,
+        "amenities": ["outdoor kitchen", "fire pit"]
+      },
+      {
+        "id": 9,
+        "sellOrRent": "rent",
+        "address": { "street": "606 Spruce Ct", "city": "Orlando", "state": "FL", "zip": "32801" },
+        "price": 2700,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1600,
+        "amenities": ["community pool", "clubhouse"]
+      },
+      {
+        "id": 10,
+        "sellOrRent": "sell",
+        "address": { "street": "707 Walnut St", "city": "Houston", "state": "TX", "zip": "77001" },
+        "price": 510000,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2300,
+        "amenities": ["sauna", "private garden"]
+      },
+      {
+        "id": 11,
+        "sellOrRent": "rent",
+        "address": { "street": "808 Chestnut Blvd", "city": "Atlanta", "state": "GA", "zip": "30301" },
+        "price": 3500,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2200,
+        "amenities": ["game room", "fenced yard"]
+      },
+      {
+        "id": 12,
+        "sellOrRent": "sell",
+        "address": { "street": "909 Sycamore Ave", "city": "San Diego", "state": "CA", "zip": "92101" },
+        "price": 850000,
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "squareFeet": 3200,
+        "amenities": ["home office", "guest house"]
+      },
+      {
+        "id": 13,
+        "sellOrRent": "rent",
+        "address": { "street": "1010 Magnolia Rd", "city": "Nashville", "state": "TN", "zip": "37201" },
+        "price": 2500,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1500,
+        "amenities": ["music studio", "pet-friendly"]
+      },
+      {
+        "id": 14,
+        "sellOrRent": "sell",
+        "address": { "street": "1111 Willow St", "city": "Boston", "state": "MA", "zip": "02101" },
+        "price": 780000,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2800,
+        "amenities": ["wine cellar", "home gym"]
+      },
+      {
+        "id": 15,
+        "sellOrRent": "sell",
+        "address": { "street": "1212 Redwood St", "city": "Portland", "state": "OR", "zip": "97201" },
+        "price": 670000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 2000,
+        "amenities": ["solar panels", "large backyard"]
+      },
+      {
+        "id": 16,
+        "sellOrRent": "rent",
+        "address": { "street": "1313 Aspen Dr", "city": "Minneapolis", "state": "MN", "zip": "55401" },
+        "price": 2900,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1400,
+        "amenities": ["heated garage", "smart home system"]
+      },
+      {
+        "id": 17,
+        "sellOrRent": "sell",
+        "address": { "street": "1414 Cedar Rd", "city": "Dallas", "state": "TX", "zip": "75201" },
+        "price": 480000,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2400,
+        "amenities": ["fire pit", "open floor plan"]
+      },
+      {
+        "id": 18,
+        "sellOrRent": "rent",
+        "address": { "street": "1515 Poplar St", "city": "Philadelphia", "state": "PA", "zip": "19101" },
+        "price": 3100,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1700,
+        "amenities": ["rooftop deck", "walk-in closets"]
+      },
+      {
+        "id": 19,
+        "sellOrRent": "rent",
+        "address": { "street": "1616 Fir Ave", "city": "Charlotte", "state": "NC", "zip": "28201" },
+        "price": 550000,
+        "bedrooms": 3,
+        "bathrooms": 2.5,
+        "squareFeet": 2100,
+        "amenities": ["home office", "two-car garage"]
+      },
+      {
+        "id": 20,
+        "sellOrRent": "rent",
+        "address": { "street": "1717 Pine Rd", "city": "San Antonio", "state": "TX", "zip": "78201" },
+        "price": 2800,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1350,
+        "amenities": ["gated community", "community pool"]
       }
     ]
   }
