@@ -199,159 +199,160 @@
         "bathrooms": 2,
         "squareFeet": 1350,
         "amenities": ["gated community", "community pool"]
+      },
+      
+      {
+        "id": 21,
+        "sellOrRent": "rent",
+        "address": { "street": "456 Oak St", "city": "San Francisco", "state": "CA", "zip": "94102" },
+        "price": 3500,
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "squareFeet": 1200,
+        "amenities": ["balcony", "gym", "pet-friendly"]
+      },
+
+      {
+        "id": 22,
+        "sellOrRent": "sell",
+        "address": { "street": "789 Maple Ave", "city": "Austin", "state": "TX", "zip": "78701" },
+        "price": 600000,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2500,
+        "amenities": ["garage", "backyard", "fire pit"]
+      },
+      {
+        "id": 23,
+        "sellOrRent": "rent",
+        "address": { "street": "321 Pine St", "city": "Chicago", "state": "IL", "zip": "60605" },
+        "price": 2500,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1500,
+        "amenities": ["rooftop access", "doorman", "modern kitchen"]
+      },
+      {
+        "id": 24,
+        "sellOrRent": "sell",
+        "address": { "street": "654 Elm St", "city": "Miami", "state": "FL", "zip": "33101" },
+        "price": 750000,
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "squareFeet": 3000,
+        "amenities": ["pool", "deck", "home office"]
+      },
+      {
+        "id": 25,
+        "sellOrRent": "sell",
+        "address": { "street": "987 Birch Rd", "city": "Seattle", "state": "WA", "zip": "98101" },
+        "price": 500000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1800,
+        "amenities": ["garden", "shed", "patio"]
+      },
+      {
+        "id": 26,
+        "sellOrRent": "rent",
+        "address": { "street": "123 Cedar Ln", "city": "Denver", "state": "CO", "zip": "80202" },
+        "price": 2800,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1300,
+        "amenities": ["fireplace", "mountain view", "community pool"]
+      },
+      {
+        "id": 27,
+        "sellOrRent": "sell",
+        "address": { "street": "456 Spruce Dr", "city": "Boston", "state": "MA", "zip": "02108" },
+        "price": 850000,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2600,
+        "amenities": ["finished basement", "sunroom", "hardwood floors"]
+      },
+      {
+        "id": 29,
+        "sellOrRent": "rent",
+        "address": { "street": "789 Willow St", "city": "New York", "state": "NY", "zip": "10001" },
+        "price": 4000,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1100,
+        "amenities": ["gym", "concierge", "city view"]
+      },
+      {
+        "id": 30,
+        "sellOrRent": "sell",
+        "address": { "street": "321 Poplar Ave", "city": "Portland", "state": "OR", "zip": "97201" },
+        "price": 550000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1900,
+        "amenities": ["garage", "garden", "solar panels"]
+      },
+      {
+        "id": 31,
+        "sellOrRent": "sell",
+        "address": { "street": "654 Ash Blvd", "city": "Atlanta", "state": "GA", "zip": "30303" },
+        "price": 400000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1700,
+        "amenities": ["deck", "fireplace", "security system"]
+      },
+      {
+        "id": 32,
+        "sellOrRent": "rent",
+        "address": { "street": "987 Redwood St", "city": "Philadelphia", "state": "PA", "zip": "19103" },
+        "price": 3200,
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "squareFeet": 1000,
+        "amenities": ["balcony", "in-unit laundry", "central air"]
+      },
+      {
+        "id": 33,
+        "sellOrRent": "sell",
+        "address": { "street": "123 Cypress Ln", "city": "Phoenix", "state": "AZ", "zip": "85001" },
+        "price": 650000,
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "squareFeet": 2400,
+        "amenities": ["pool", "covered patio", "energy-efficient appliances"]
+      },
+      {
+        "id": 34,
+        "sellOrRent": "sell",
+        "address": { "street": "456 Palm Dr", "city": "Houston", "state": "TX", "zip": "77002" },
+        "price": 450000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 1850,
+        "amenities": ["garage", "fenced yard", "home office"]
+      },
+      {
+        "id": 35,
+        "sellOrRent": "rent",
+        "address": { "street": "789 Fir St", "city": "San Diego", "state": "CA", "zip": "92101" },
+        "price": 3800,
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "squareFeet": 1250,
+        "amenities": ["rooftop terrace", "gym", "ocean view"]
+      },
+      {
+        "id": 36,
+        "sellOrRent": "sell",
+        "address": { "street": "321 Alder Ave", "city": "Dallas", "state": "TX", "zip": "75201" },
+        "price": 500000,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "squareFeet": 2000,
+        "amenities": ["deck", "hardwood floors", "modern kitchen"]
       }
-      [
-        {
-          "id": 2,
-          "sellOrRent": "rent",
-          "address": { "street": "456 Oak St", "city": "San Francisco", "state": "CA", "zip": "94102" },
-          "price": 3500,
-          "bedrooms": 2,
-          "bathrooms": 1,
-          "squareFeet": 1200,
-          "amenities": ["balcony", "gym", "pet-friendly"]
-        },
-        {
-          "id": 3,
-          "sellOrRent": "sell",
-          "address": { "street": "789 Maple Ave", "city": "Austin", "state": "TX", "zip": "78701" },
-          "price": 600000,
-          "bedrooms": 4,
-          "bathrooms": 3,
-          "squareFeet": 2500,
-          "amenities": ["garage", "backyard", "fire pit"]
-        },
-        {
-          "id": 4,
-          "sellOrRent": "rent",
-          "address": { "street": "321 Pine St", "city": "Chicago", "state": "IL", "zip": "60605" },
-          "price": 2500,
-          "bedrooms": 3,
-          "bathrooms": 2,
-          "squareFeet": 1500,
-          "amenities": ["rooftop access", "doorman", "modern kitchen"]
-        },
-        {
-          "id": 5,
-          "sellOrRent": "sell",
-          "address": { "street": "654 Elm St", "city": "Miami", "state": "FL", "zip": "33101" },
-          "price": 750000,
-          "bedrooms": 5,
-          "bathrooms": 4,
-          "squareFeet": 3000,
-          "amenities": ["pool", "deck", "home office"]
-        },
-        {
-          "id": 6,
-          "sellOrRent": "sell",
-          "address": { "street": "987 Birch Rd", "city": "Seattle", "state": "WA", "zip": "98101" },
-          "price": 500000,
-          "bedrooms": 3,
-          "bathrooms": 2,
-          "squareFeet": 1800,
-          "amenities": ["garden", "shed", "patio"]
-        },
-        {
-          "id": 7,
-          "sellOrRent": "rent",
-          "address": { "street": "123 Cedar Ln", "city": "Denver", "state": "CO", "zip": "80202" },
-          "price": 2800,
-          "bedrooms": 2,
-          "bathrooms": 2,
-          "squareFeet": 1300,
-          "amenities": ["fireplace", "mountain view", "community pool"]
-        },
-        {
-          "id": 8,
-          "sellOrRent": "sell",
-          "address": { "street": "456 Spruce Dr", "city": "Boston", "state": "MA", "zip": "02108" },
-          "price": 850000,
-          "bedrooms": 4,
-          "bathrooms": 3,
-          "squareFeet": 2600,
-          "amenities": ["finished basement", "sunroom", "hardwood floors"]
-        },
-        {
-          "id": 9,
-          "sellOrRent": "rent",
-          "address": { "street": "789 Willow St", "city": "New York", "state": "NY", "zip": "10001" },
-          "price": 4000,
-          "bedrooms": 2,
-          "bathrooms": 2,
-          "squareFeet": 1100,
-          "amenities": ["gym", "concierge", "city view"]
-        },
-        {
-          "id": 10,
-          "sellOrRent": "sell",
-          "address": { "street": "321 Poplar Ave", "city": "Portland", "state": "OR", "zip": "97201" },
-          "price": 550000,
-          "bedrooms": 3,
-          "bathrooms": 2,
-          "squareFeet": 1900,
-          "amenities": ["garage", "garden", "solar panels"]
-        },
-        {
-          "id": 11,
-          "sellOrRent": "sell",
-          "address": { "street": "654 Ash Blvd", "city": "Atlanta", "state": "GA", "zip": "30303" },
-          "price": 400000,
-          "bedrooms": 3,
-          "bathrooms": 2,
-          "squareFeet": 1700,
-          "amenities": ["deck", "fireplace", "security system"]
-        },
-        {
-          "id": 12,
-          "sellOrRent": "rent",
-          "address": { "street": "987 Redwood St", "city": "Philadelphia", "state": "PA", "zip": "19103" },
-          "price": 3200,
-          "bedrooms": 2,
-          "bathrooms": 1,
-          "squareFeet": 1000,
-          "amenities": ["balcony", "in-unit laundry", "central air"]
-        },
-        {
-          "id": 13,
-          "sellOrRent": "sell",
-          "address": { "street": "123 Cypress Ln", "city": "Phoenix", "state": "AZ", "zip": "85001" },
-          "price": 650000,
-          "bedrooms": 4,
-          "bathrooms": 3,
-          "squareFeet": 2400,
-          "amenities": ["pool", "covered patio", "energy-efficient appliances"]
-        },
-        {
-          "id": 14,
-          "sellOrRent": "sell",
-          "address": { "street": "456 Palm Dr", "city": "Houston", "state": "TX", "zip": "77002" },
-          "price": 450000,
-          "bedrooms": 3,
-          "bathrooms": 2,
-          "squareFeet": 1850,
-          "amenities": ["garage", "fenced yard", "home office"]
-        },
-        {
-          "id": 15,
-          "sellOrRent": "rent",
-          "address": { "street": "789 Fir St", "city": "San Diego", "state": "CA", "zip": "92101" },
-          "price": 3800,
-          "bedrooms": 2,
-          "bathrooms": 2,
-          "squareFeet": 1250,
-          "amenities": ["rooftop terrace", "gym", "ocean view"]
-        },
-        {
-          "id": 16,
-          "sellOrRent": "sell",
-          "address": { "street": "321 Alder Ave", "city": "Dallas", "state": "TX", "zip": "75201" },
-          "price": 500000,
-          "bedrooms": 3,
-          "bathrooms": 2,
-          "squareFeet": 2000,
-          "amenities": ["deck", "hardwood floors", "modern kitchen"]
-        }
-      ]
+      
       
     ]
   }
