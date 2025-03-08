@@ -89,6 +89,9 @@
                 width: 400px;
                 height: 300px;
             }
+            #row1{ 
+                display: flex;
+            }
 
             /* @media () */
 
@@ -147,23 +150,67 @@
             </div>
             <script>
                 $(document).ready(function(){ 
-                    var img_arr = [ "rm1.jpg", "hs2.jpg", "bthrm1.jpg"]
-    
-                    genDiv = $('<div>').attr('id',"house_gllry")
-        
-                    for (var i = 0; i < img_arr.length; i++) { 
-                        var newDiv = $('<div>')
-                        var img  = $('<img>').attr('src', './images/'+ img_arr[i]);
-                        img.addClass("img");
-                        newDiv.append(img);
-                        genDiv.append(newDiv)
-                        
-                    }
-                    console.log(genDiv.html());
 
-                    $("#main").append(genDiv)
-                    var main_content = $("main").html();
-                    console.log(main_content);
+                    fetch('./house_data.json')
+                    .then (response => response.json())
+                    .then (data => displayHouses(data.houses))
+                    .catch (error => console.log(error))
+            
+                    function displayHouses(houses) {
+                        var img_arr = [ "rm1.jpg", "hs2.jpg", "bthrm1.jpg"]                     
+                        
+                        genDiv = $('<div>').attr('id',"house_gllry")
+                        var newRow = $('<div>')
+                            .attr("id", "row1")
+                            .addClass("rows")
+                        for(i = 0; i < 3; i++ ) { 
+                            var newImgDiv = $('<div>')
+                                .addClass("imgDiv");
+                            var newImg = $('<img>')
+                                .attr('src', './images/'+ img_arr[i])
+                                .addClass("img");
+                            newRow.append(newImg);
+                            console.log(newImg.html());
+                        }
+                        genDiv.append(newRow);
+                        console.log(genDiv.html());
+
+                        $("#main").append(genDiv)
+                        var main_content = $("main").html();
+                        console.log(main_content)
+                    }
+
+                    
+                        //     houseCard.innerHTML = `
+                        //         <h2>${house.name}</h2>
+                        //         <p><strong>Price:</strong> $${house.price}</p>
+                        //         <p><strong>Location:</strong> ${house.address.street}, ${house.address.city}, ${house.address.state}</p>
+                        //         <p><strong>Rooms:</strong> ${house.bedrooms} bedroom, ${house.bathrooms} bathroom, ${house.squareFeet} squareFeet</p>
+                        //         <p><strong>Amenities:</strong> ${house.amenities} </p>
+                        //         <img src="${house.image}" alt="${house.name}" width="200">
+                        //         <hr>
+                        //     `;
+
+                        // houseListings.appendChild(houseCard);
+                    // var img_arr = [ "rm1.jpg", "hs2.jpg", "bthrm1.jpg"]
+    
+                    // genDiv = $('<div>').attr('id',"house_gllry")
+        
+                    // for (var i = 0; i < img_arr.length; i++) { 
+                    //     var newDiv = $('<div>')
+                    //         .attr("id", "row1")
+                    //         .addClass("rows")
+                    //     var img  = $('<img>').attr('src', './images/'+ img_arr[i]);
+                    //     img.addClass("img");
+                    //     newDiv.append(img);
+                    //     genDiv.append(newDiv)
+                        
+                    // }
+                    // console.log(genDiv.html());
+
+                    // $("#main").append(genDiv)
+                    // var main_content = $("main").html();
+                    // console.log(main_content);
                 })
                 
             </script>

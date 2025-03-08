@@ -8,7 +8,8 @@
         "bedrooms": 3,
         "bathrooms": 2,
         "squareFeet": 1800,
-        "amenities": ["pool", " fireplace", " garden"]
+        "amenities": ["pool", " fireplace", " garden"],
+        "img" : "house1.jpg"
       },
       {
         "id": 2,
