@@ -16,27 +16,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
-            section { 
-                position: relative;
+            #section1 { 
                 justify-content: center;
                 align-items: center;
                 margin: 0px auto;
-
+                
             }
 
-            .overlay { 
+            /* .overlay { 
                 position: absolute;
                 background-color: rgba(0, 0, 0, 0.5);
                 color: black;
                 width: 100%;
                 height: 100%; 
+            } */
+            #section1 img { 
+                width: 100%;
+                /* position: fixed; */
+
             }
+
+            #section2 { 
+                /* position: absolute; */
+                /* height: 100%; */
+            }
+
             .contact_form { 
                 display: flex;
-                position: absolute;
-                top : 20px;
-                width: 100%;
+                flex-direction: column;
+                margin-top: 30px;
+                width: 700px;
+                height: 500px;
+                padding: 20px 30px;
                 justify-content: center;
+                border: 2px solid black;
+                background-color: white;
+                bottom: 400px;
                 /* display: none; */
             }
             .input { 
@@ -46,6 +61,7 @@
                 height: 50px;
                 border-radius: 10px;
                 padding: 8px;
+                justify-content: center;
             }
             #note {  
                 height: 100px;
@@ -62,10 +78,18 @@
                 height: 50px;
                 border-radius: 10px;
             }
+
+            footer{ 
+                position: relative;
+                bottom: 0;
+            }
+
+           
         </style>
         
     </head>
     <body>
+        <div id="top_bar">
         <!-- Header -->
         <header>
             <a href="index.html">
@@ -86,11 +110,16 @@
             <a href="contact.html">Contact Us</a>
         </nav>
         <div id = "below_nav"></div>
-        <section>
+         </div>
+        <section id="section1">
             <div class="overlay">
             </div>
-            <img src="contact_bg.jpg" alt="">
+            <img src="./images/contact_bg.jpg" alt="">
+        </section >
+        <section id="section2">
+           
             <div class="contact_form">
+                <h1>Contact Us</h1>
                 <form action="#">
                     <input class = "input" type="text" placeholder="Enter your name"> <br>
                     <input class = "input" type="text" placeholder="Enter your contact"> <br>
@@ -104,9 +133,6 @@
 
             </div>
         </section>
-        <script>
-            document.getElementById()
-        </script>
         <!-- Footer -->
         <footer>
             <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 

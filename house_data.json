@@ -26,7 +26,7 @@
         "id": 3,
         "sellOrRent": "rent",
         "address": { "street": "789 Oak St", "city": "Miami", "state": "FL", "zip": "33101" },
-        "price": 500000,
+        "price": 5000,
         "bedrooms": 5,
         "bathrooms": 4,
         "squareFeet": 3000,
@@ -297,7 +297,7 @@
         "bathrooms": 3,
         "squareFeet": 2600,
         "amenities": ["finished basement", "sunroom", "hardwood floors"],
-        "image": "images/Houses/house27.png"
+        "image": "'images/Houses/house27.png'"
       },
       {
         "id": 29,

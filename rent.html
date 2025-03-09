@@ -22,22 +22,58 @@
             }
 
             #main { 
-                background-color: aqua;
-                border: 2px solid block;
+                border: 15px solid block;
+                justify-content: center;
                 width: 75%;
-                
-
+                margin: 152px  0px;
             }
 
-            .rows { 
-                justify-content: center;
-                margin: 20px auto;
+
+            #house_gllry{ 
+                width:100%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px 0px 0px 10px;
+                box-sizing: border-box;
+                /* border: 2px solid black; */
             }
 
             .imgDiv { 
-                margin : 10px ; 
+                margin : 72px 0px 0px  20px ; 
+                width : 380px; 
+                height: 380px;
+                justify-content: center;
+                border: 2px solid  #50affd;
+                border-radius: 5px;
+                display: grid;
+                flex-direction: column;
+                padding: 10px;
+                box-sizing: border-box;
+                box-shadow: -5px -5px 20px #888888;
 
             }
+            .img { 
+                width: 350px;
+                height: 300px;
+                justify-content: center;
+                margin: 0 auto;
+                border-radius: 5px;
+                
+            }
+            .info { 
+                margin: 0 auto;
+                width: 100%;
+               
+            }
+            .price { 
+                font-size: 1.5em;
+            }
+
+            .address{
+                display: inline-block;
+            }
+            
+           
 
             #sidebar { 
                 /* background-color: yellow; */
@@ -50,7 +86,7 @@
             #in_sidebar{ 
                 width: 20%;
                 top: 250px;
-                left: 35px;
+                left: 20px;
                 border: 2px solid #50affd;
                 padding: 50px 10px;
                 border-radius: 5px;
@@ -96,46 +132,35 @@
                 background-color: #008cba;
                 
             }
-
-           
-            .img { 
-                width: 400px;
-                height: 300px;
-            }
-            .rows{ 
-                display: flex;
-            }
-
-
-           
-
             /* @media () */
-
         </style>        
     </head>
     <body>
      
-        
+
         <!-- Header -->
-        <header>
-            <a href="index.html">
-                <div id = "img_container">
-                    <img id="logo" src="./images/house_logo.png">
-                </div>
-            </a>
-            <span id="title">PropertyPath</span>
-        </header>
-        <!-- Navagation Bar -->
-        <nav>
-            <a href="index.html">Home </a>
-            <a href="buy.html">Buy </a>
-            <a href="rent.html">Rent</a>
-            <a href="sell.html">Sell</a>
-            <a href="agents.html">Agents</a>
-            <a href="qanda.html">Q/A</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-        <div id = "below_nav"></div>
+        <div id="top_bar">
+            <header>
+                <a href="index.html">
+                    <div id = "img_container">
+                        <img id="logo" src="./images/house_logo.png">
+                    </div>
+                </a>
+                <span id="title">PropertyPath</span>
+            </header>
+            <!-- Navagation Bar -->
+            <nav>
+                <a href="index.html">Home </a>
+                <a href="buy.html">Buy </a>
+                <a href="rent.html">Rent</a>
+                <a href="sell.html">Sell</a>
+                <a href="agents.html">Agents</a>
+                <a href="qanda.html">Q/A</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            <div id = "below_nav"></div>
+         </div>
+
         <section id="first">
             
             <div id="sidebar">
@@ -167,31 +192,36 @@
                     .then (data => displayHouses(data.houses))
                     .catch (error => console.log(error))
             
-                    function displayHouses(houses) {                    
-                        for (i = 0; i < (Math.ceil(houses.length/3)); i++) { 
-                            var newRow = $('<div>')
-                            .attr("id", "row" + i)
-                            .addClass("rows")
-                         
-                            for(j = 0; j < 3; j++) { 
-                                
-                                if(houses[i].sellOrRent == "rent") { 
+                    function displayHouses(houses) {  
+                        var count_rent = 0 
+                        console.log(count_rent)  
+                        genDiv = $("<div>").attr("id", "house_gllry")             
+                        for (i = 0; i < (Math.ceil(houses.length)); i++) {                                                             
+                            if(houses[i].sellOrRent == "rent") { 
                                 //Create Image div and image
                                 var newImgDiv = $('<div>')
                                     .addClass("imgDiv");
-                                var newImg = $('<img>')
-                                    .attr('src', './images/'+houses[j].img)
-                                    .addClass("img");
-                                //Add image to image div
-                                newImgDiv.append(newImg);
+                                
+                                var newImgDiv = [ 
+                                    " <div class = 'imgDiv'> " + 
+                                        "<img src = "+ houses[i].image +" class = 'img'>" + 
+
+                                        "<div class = 'info'>" + 
+                                        "<span class = 'price'> $"+ houses[i].price + "</span>"
+                                       + "<br/>" +
+                                        "<span class = 'address'>"+ houses[i].address.street + " " + 
+                                        houses[i].address.city + " " + houses[i].address.state + "</span>"
+                                        + "</div>"
+
+                                    + "</div>"
+                                ]
+
                                 //Add image_div to row_div
-                                newRow.append(newImgDiv);
-                                }    
-                            }
-                            console.log(newRow.html()); 
-                            //Add newRow
-                            $("#main").append(newRow);
-                        }  
+                                genDiv.append(newImgDiv);
+                                genDiv.append("    ");
+                             }    
+                        } 
+                        $("#main").append(genDiv)                    
                         console.log($("#main").html());                      
                     }
                 })
