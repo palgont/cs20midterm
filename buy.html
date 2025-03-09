@@ -14,32 +14,108 @@
         rel="stylesheet">
         <!-- For responsiveness -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Internal CSS -->
+        <style>
+            body {
+                font-family: arial;
+            }
+
+            .page_name {
+                font-size: 40px; 
+                text-align: center;
+            }
+
+            .container {
+                display: flex;
+                flex: 1;
+            }
+
+            .sidebar {
+                width: 250px;
+                background-color: #e5e5e5;
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                margin: 20px;
+                border-radius: 20px;
+                box-shadow: 0px 5px 12px #888888;
+            }
+
+            .input {
+                margin: 10px;
+                padding: 10px;
+                border: 1px;
+                border-radius: 5px;
+            }
+
+            .filter_button {
+                margin: 10px;
+                padding: 6px;
+            }
+
+            .sidebar_title {
+                color: black;
+                margin-left: 10px;
+                font-family: arial;
+                text-align: center;
+            }
+            
+            .content {
+                flex: 1;
+                padding: 20px;
+            }
+
+            .house_card {
+                display: flex;
+                gap: 15px;
+                background-color: #eeeeee;
+                padding: 10px;
+                border: 1px;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                box-shadow: 0px 3px 5px #888888;
+            }
+        </style>
         <!-- JavaScript -->
         <script>
             fetch('./house_data.json')
                 .then (response => response.json())
-                .then (data => displayHouses(data.houses))
+                .then (data => filter_houses(data.houses))
                 .catch (error => console.log(error))
+
+            function filter_houses(houses) {
+                houseList = []
+                houses.forEach(house => {
+                    if (`${house.sellOrRent}` == "sell") {
+                        houseList.push(house)
+                    }
+                });
+                displayHouses(houseList)
+            }
             
             function displayHouses(houses) {
                 const houseListings = document.getElementById('house-listings');
                 houseListings.innerHTML = ""; // Clear existing content
 
                 houses.forEach(house => {
-                    const houseCard = document.createElement('div');
-                    houseCard.classList.add('house-card');
+                    if (`${house.sellOrRent}` == "sell") {
+                        const houseCard = document.createElement('div');
+                        houseCard.classList.add('house-card');
 
-                    houseCard.innerHTML = `
-                        <h2>${house.name}</h2>
-                        <p><strong>Price:</strong> $${house.price}</p>
-                        <p><strong>Location:</strong> ${house.address.street}, ${house.address.city}, ${house.address.state}</p>
-                        <p><strong>Rooms:</strong> ${house.bedrooms} bedroom, ${house.bathrooms} bathroom, ${house.squareFeet} squareFeet</p>
-                        <p><strong>Amenities:</strong> ${house.amenities} </p>
-                        <img src="${house.image}" alt="${house.name}" width="200">
-                        <hr>
-                    `;
+                        houseCard.innerHTML = `
+                            <div class="house_card">
+                                <img src="${house.image}" alt="House Image" width="200">
+                                <div>
+                                    <p><strong>Price:</strong> $${house.price}</p>
+                                    <p><strong>Address:</strong> ${house.address.street}, ${house.address.city}, ${house.address.state}</p>
+                                    <p><strong>Rooms:</strong> ${house.bedrooms} bedroom, ${house.bathrooms} bathroom, ${house.squareFeet} squareFeet</p>
+                                    <p><strong>Amenities:</strong> ${house.amenities} </p>
+                                </div>
+                            </div>
+                        `;
 
-                    houseListings.appendChild(houseCard);
+                        houseListings.appendChild(houseCard);
+                    }
                 });
             }
         </script>
@@ -65,11 +141,22 @@
             <a href="contact.html">Contact Us</a>
         </nav>
         <div id = "below_nav"></div>
+        <div class="container">
+        <!-- Sidebar -->
+            <div class="sidebar">
+                <h2 class="sidebar_title">Search</h2>
+                <input type="text" placeholder="Price range" class="input">
+                <input type="text" placeholder="# Bedrooms" class="input">
+                <input type="text" placeholder="# Stories" class="input">
+                <input type="text" placeholder="State" class="input">
+                <button class="filter_button">Search</button>
+            </div>
         <!-- Page Content -->
-        <section>
-            <h1 style="font-size: 40px; text-align: center;">Houses for Sale</h1>
-            <div id="house-listings"></div>
-        </section>
+            <div class="content">
+                <h1 class="page_name">Houses for Sale</h1>
+                <div id="house-listings"></div>
+            </div>
+        </div>
         <!-- Footer -->
         <footer>
             <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 

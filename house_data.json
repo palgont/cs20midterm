@@ -297,7 +297,7 @@
         "bathrooms": 3,
         "squareFeet": 2600,
         "amenities": ["finished basement", "sunroom", "hardwood floors"],
-        "image": "'images/Houses/house27.png'"
+        "image": "images/Houses/house27.png"
       },
       {
         "id": 29,
