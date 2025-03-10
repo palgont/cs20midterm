@@ -61,7 +61,7 @@
                 background-color: #008cba;
             }
     
-            #estimate {
+            #estimate, #zestimate_result {
                 text-align: center;
                 font-size: 24px;
                 font-weight: bold;
@@ -92,8 +92,85 @@
             <a href="contact.html">Contact Us</a>
         </nav>
         <div id = "below_nav"></div>
+        <!-- API Estimate Form Section -->
         <section class="form-container">
-            <h2>Get an Estimate for Your Property</h2>
+            <h2>Get a Market Estimate for Your Property</h2>
+            <form id="Zestimate">
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="123 Example St"required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select id="state" name="state" required>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Conneticut">Conneticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code:</label>
+                    <input type="number" id="zip" name="zip" min="0" max="99734" required>
+                </div>
+                <button type="submit" class="btn" id="zestimateBtn">Get Estimate</button>
+            </form>
+            <!-- Placeholder to diplsay Zestimate -->
+            <div id="zestimate_result"></div>
+        </section>
+        <!-- Manual Estimate Form Section -->
+        <section class="form-container">
+            <h2>Get Our Estimate for Your Property</h2>
             <form id="sellForm">
                 <div class="form-group">
                     <label for="year">Year Built:</label>
@@ -131,7 +208,7 @@
     
                 <button type="button" class="btn" id="estimateBtn">Get Estimate</button>
             </form>
-    
+            <!-- Placeholder to display manual estimate -->
             <div id="estimate"></div>
         </section>
     </div>
@@ -180,6 +257,56 @@
                 $("#estimate").html(`Estimated Price: <strong>${formattedPrice}</strong>`);
             });
         });
+
+                // API Integration for Estimate
+                $("#Zestimate").submit(function(event) {
+                    event.preventDefault();
+                    let street = $("#address").val();
+                    let city = $("#city").val();
+                    let state = $("#state").val();
+                    let zip = $("#zip").val();
+                    let address = `${street} ${city} ${state} ${zip}`;
+                    calcZestimate(address);
+                });
+
+ 
+                function calcZestimate(address) {
+                    const xhr = new XMLHttpRequest();
+                    url = `https://real-time-zillow-data.p.rapidapi.com/property-details-address?address=${address}`;
+
+                    xhr.addEventListener('readystatechange', function () {
+                        if (this.readyState === 4) {
+                            if (this.status === 200) {
+                                try {
+                                    const response = JSON.parse(this.responseText);
+                                    displayZestimate(response);
+                                } catch (error) {
+                                    console.error("Error parsing JSON:", error);
+                                    document.getElementById('zestimate_result').textContent = "Error retrieving estimate.";
+                                }
+                            } else {
+                                console.error("API Request Failed:", this.status, this.statusText);
+                                document.getElementById('zestimate_result').textContent = "Failed to retrieve estimate.";
+                            }
+                        }
+                    });
+
+                    xhr.open('GET', url);
+                    xhr.setRequestHeader('x-rapidapi-key', 'b0965f3214msh0dadb2ecd1d8345p1fadccjsnb12422b10e35');
+                    xhr.setRequestHeader('x-rapidapi-host', 'real-time-zillow-data.p.rapidapi.com');
+                    xhr.send();
+                }
+
+                // Function to display the price estimate
+                function displayZestimate(response) {
+                    const priceElement = document.getElementById('zestimate_result');
+                    
+                    if (response && response.data.price) {
+                        priceElement.textContent = `Estimated Price: $${response.data.price}`;
+                    } else {
+                        priceElement.textContent = 'Price estimate not available for the provided address.';
+                    }
+                }
     </script>
     </div>
     </body>
