@@ -61,7 +61,7 @@
                 background-color: #008cba;
             }
     
-            #estimate {
+            #estimate, #zestimate_result {
                 text-align: center;
                 font-size: 24px;
                 font-weight: bold;
@@ -102,7 +102,7 @@
                 </div>
                 <div class="form-group">
                     <label for="city">City</label>
-                    <input type="text" id="city" name="city" placeholder="Medford"required>
+                    <input type="text" id="city" name="city" required>
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
@@ -165,11 +165,12 @@
                 </div>
                 <button type="submit" class="btn" id="zestimateBtn">Get Estimate</button>
             </form>
+            <!-- Placeholder to diplsay Zestimate -->
             <div id="zestimate_result"></div>
         </section>
         <!-- Manual Estimate Form Section -->
         <section class="form-container">
-            <h2>Get a Estimate for Your Property</h2>
+            <h2>Get Our Estimate for Your Property</h2>
             <form id="sellForm">
                 <div class="form-group">
                     <label for="year">Year Built:</label>
@@ -207,7 +208,7 @@
     
                 <button type="button" class="btn" id="estimateBtn">Get Estimate</button>
             </form>
-    
+            <!-- Placeholder to display manual estimate -->
             <div id="estimate"></div>
         </section>
     </div>
@@ -263,15 +264,15 @@
                     let street = $("#address").val();
                     let city = $("#city").val();
                     let state = $("#state").val();
-                    let zip = parseInt($("#year").val());
-                    let address = street + " " + city + " " + state + " " + zip;
+                    let zip = $("#zip").val();
+                    let address = `${street} ${city} ${state} ${zip}`;
                     calcZestimate(address);
                 });
 
  
                 function calcZestimate(address) {
                     const xhr = new XMLHttpRequest();
-                    const url = `https://real-time-zillow-data.p.rapidapi.com/property-details-address?address=${encodeURIComponent(address)}`;
+                    url = `https://real-time-zillow-data.p.rapidapi.com/property-details-address?address=${address}`;
 
                     xhr.addEventListener('readystatechange', function () {
                         if (this.readyState === 4) {
@@ -300,8 +301,8 @@
                 function displayZestimate(response) {
                     const priceElement = document.getElementById('zestimate_result');
                     
-                    if (response && response.price) {
-                        priceElement.textContent = `Estimated Price: $${response.price}`;
+                    if (response && response.data.price) {
+                        priceElement.textContent = `Estimated Price: $${response.data.price}`;
                     } else {
                         priceElement.textContent = 'Price estimate not available for the provided address.';
                     }
