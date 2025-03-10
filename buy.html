@@ -48,7 +48,7 @@
                 border-radius: 5px;
             }
 
-            .filter_button {
+            .button {
                 margin: 10px;
                 padding: 6px;
             }
@@ -80,17 +80,48 @@
         <script>
             fetch('./house_data.json')
                 .then (response => response.json())
-                .then (data => filter_houses(data.houses))
+                .then (data => {
+                    houses = data.houses;
+                    displayHouses(data.houses);
+                })
                 .catch (error => console.log(error))
 
-            function filter_houses(houses) {
-                houseList = []
-                houses.forEach(house => {
-                    if (`${house.sellOrRent}` == "sell") {
-                        houseList.push(house)
-                    }
-                });
-                displayHouses(houseList)
+            function filterHouses() {
+                filteredHouses = houses;
+
+                const price = document.getElementById("price").value;
+                if (price != "") {
+                    filteredHouses = houses.filter(house => house.price <= price);
+                    displayHouses(filteredHouses);
+                }
+
+                const numBedrooms = document.getElementById("bedrooms").value;
+                if (numBedrooms != "") {
+                    filteredHouses = houses.filter(house => house.bedrooms == numBedrooms);
+                    displayHouses(filteredHouses);
+                }
+
+                const numBathrooms = document.getElementById("bathrooms").value;
+                if (numBathrooms != "") {
+                    filteredHouses = filteredHouses.filter(house => house.bathrooms == numBathrooms);
+                    displayHouses(filteredHouses);
+                }
+
+                const state = document.getElementById("state").value;
+                if (state != "") {
+                    console.log(state);
+                    filteredHouses = filteredHouses.filter(house => house.address.state == state);
+                    displayHouses(filteredHouses);
+                }
+
+                document.getElementById("price").value = "";
+                document.getElementById("bedrooms").value = "";
+                document.getElementById("bathrooms").value = "";
+                document.getElementById("state").value = "";
+            }
+
+            function reset() {
+                displayHouses(houses);
             }
             
             function displayHouses(houses) {
@@ -145,11 +176,12 @@
         <!-- Sidebar -->
             <div class="sidebar">
                 <h2 class="sidebar_title">Search</h2>
-                <input type="text" placeholder="Price range" class="input">
-                <input type="text" placeholder="# Bedrooms" class="input">
-                <input type="text" placeholder="# Stories" class="input">
-                <input type="text" placeholder="State" class="input">
-                <button class="filter_button">Search</button>
+                <input type="text" placeholder="Max Price" value="" id="price" class="input">
+                <input type="text" placeholder="# Bedrooms" value="" id="bedrooms" class="input">
+                <input type="text" placeholder="# Bathrooms" value="" id="bathrooms" class="input">
+                <input type="text" placeholder="State" value="" id="state" class="input">
+                <button class="button" onclick="filterHouses()">Search</button>
+                <button class="button" onclick="reset()">Reset</button>
             </div>
         <!-- Page Content -->
             <div class="content">
