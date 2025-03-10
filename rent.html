@@ -93,21 +93,36 @@
                 transition: 0.2s ease;
                 box-shadow: -5px -5px 10px #888888;
                 position: fixed;
+                
             }
 
             #in_sidebar:hover { 
                 border: 2px solid #008cba;
             }
 
-            #in_sidebar input { 
-                width: 90%; 
-                height: 35px; 
-                margin: 20px 0;
-                border-radius: 5px;
-                border: 1px solid #ccc;
+            #in_sidebar span{
+                margin-left: 5
             }
 
-
+            .input { 
+                width: 90%; 
+                height: 35px; 
+                margin: 20px 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 3px;
+            }
+            #min_p, #max_p{ 
+                width: 30%;
+                display: inline-block;
+                height: 35px; 
+                margin: 20px 10px;
+                border-radius: 5px;
+                padding: 3px;
+                border: 1px solid #ccc;
+                left: 10px;
+                
+            }
             #rntl_prd { 
                 width: 90%;
                 height: 35px ;
@@ -165,16 +180,13 @@
             
             <div id="sidebar">
                 <div id="in_sidebar">
-                    <input type="text" placeholder="Price range" id="price_rng">
-                    <input type="text" placeholder="# Bedrooms" id="num_bdrms">
-                    <input type="text" placeholder="# Stories" id="num_stories">
-                    <input type="text" placeholder="Location" id="location">
-                    <!-- <div>  -->
-                    <select name="Rental period" id="rntl_prd">
-                        <option value="#"> Rental Period</option>
-                    </select>
-                    <!-- </div> -->
-                    <button>Search</button>
+                    <span>Price Range:</span> <br/>
+                    <input type="text" placeholder="Min price" id="min_p">
+                    <input type="text" placeholder="Max price" id="max_p">
+                    <input type="text" placeholder="# Bedrooms" class="input" id="num_bdrms">
+                    <input type="text" placeholder="# Stories" class="input" id="num_stories">
+                    <input type="text" placeholder="Location" class="input" id="location">
+                    <button id="search" class="input" >Search</button>
                    
                     <!-- We probablly want to call an API for location -->
 
@@ -184,50 +196,85 @@
             
             <div id="main">               
             </div>
-            <script>
-                $(document).ready(function(){ 
-
-                    fetch('./house_data.json')
-                    .then (response => response.json())
-                    .then (data => displayHouses(data.houses))
-                    .catch (error => console.log(error))
-            
-                    function displayHouses(houses) {  
-                        var count_rent = 0 
-                        console.log(count_rent)  
-                        genDiv = $("<div>").attr("id", "house_gllry")             
-                        for (i = 0; i < (Math.ceil(houses.length)); i++) {                                                             
-                            if(houses[i].sellOrRent == "rent") { 
-                                //Create Image div and image
-                                var newImgDiv = $('<div>')
-                                    .addClass("imgDiv");
-                                
-                                var newImgDiv = [ 
-                                    " <div class = 'imgDiv'> " + 
-                                        "<img src = "+ houses[i].image +" class = 'img'>" + 
-
-                                        "<div class = 'info'>" + 
-                                        "<span class = 'price'> $"+ houses[i].price + "</span>"
-                                       + "<br/>" +
-                                        "<span class = 'address'>"+ houses[i].address.street + " " + 
-                                        houses[i].address.city + " " + houses[i].address.state + "</span>"
-                                        + "</div>"
-
-                                    + "</div>"
-                                ]
-
-                                //Add image_div to row_div
-                                genDiv.append(newImgDiv);
-                                genDiv.append("    ");
-                             }    
-                        } 
-                        $("#main").append(genDiv)                    
-                        console.log($("#main").html());                      
-                    }
-                })
-                
-            </script>
         </section>
+        <script>
+            $(document).ready(function(){ 
+                fetch('./house_data.json')
+                .then (response => response.json())
+                .then (data => {
+                    displayHouses(data.houses);
+                    $("#search").on("click", function(){ 
+                        search(data.houses); 
+                    });
+                })
+                .catch (error => console.log(error))
+        
+                function displayHouses(houses) {  
+                    var count_rent = 0 
+                    console.log(count_rent)  
+                    genDiv = $("<div>").attr("id", "house_gllry")             
+                    for (var i = 0; i < (Math.ceil(houses.length)); i++) {                                                             
+                        if(houses[i].sellOrRent == "rent") { 
+                            //Create Image div                          
+                            var newImgDiv = [ 
+                                " <div class = 'imgDiv' id  = 'imgDiv" + i + "' > " + 
+                                    "<img src = "+ houses[i].image +" class = 'img'  id = 'img"+ i + "' >" + 
+
+                                    "<div class = 'info'>" + 
+                                    "<span class = 'price'> $"+ houses[i].price + "/mo</span>"
+                                    + "<br/>" +
+                                    "<span class = 'address'>"+ houses[i].address.street + " " + 
+                                    houses[i].address.city + " " + houses[i].address.state + "</span>"
+                                    + "</div>"
+
+                                + "</div>"
+                            ]
+
+                            //Add image_div to genDiv
+                            genDiv.append(newImgDiv);
+                            genDiv.append("    ");
+                            }    
+                    } 
+                    //Add genDiv to page 
+                    $("#main").append(genDiv)                    
+                    console.log($("#main").html());                      
+                }
+                // <!-- Search Functionality -->
+
+
+                function search(houses) { 
+                    var min_price = $("#min_p").val(); 
+                    var max_price = $("#max_p").val();
+                    var num_bdrms = $("#num_bdrms").val();
+                    var location = $("#location").val();
+                    console.log("here")
+                    console.log(min_price)
+
+                    for (var i = 0; i < houses.length; i++) { 
+                        if ((houses[i].sellOrRent == "rent") && 
+                            (houses[i].price > min_price)){
+                            console.log("Right in if")
+                            $("#imgDiv" + i).css({"display":"block"});
+                            console.log(houses[i].price)
+                            console.log(min_price)
+                        } else { 
+                            console.log("Right in else")
+                            $("#imgDiv" + i).css({"display":"none"});
+                        }
+                        // console.log("Right in if")
+
+                    }
+                    console.log(min_price,max_price,num_bdrms,location );
+                }
+                    
+            })
+        </script>
+        <!-- // (houses[i].bedrooms == num_bdrms || 
+        //                     houses[i].address.city == location || 
+        //                     houses[i].address.state == location || 
+        //                     houses[i].address.street == location || 
+        //                     houses[i].address.zip == location))) 
+       -->
 
         <!-- Footer -->
         <footer>
