@@ -75,6 +75,19 @@
                 margin-bottom: 10px;
                 box-shadow: 0px 3px 5px #888888;
             }
+
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+                .sidebar {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .content {
+                    width: 100%;
+                }
+            }
         </style>
         <!-- JavaScript -->
         <script>
@@ -179,7 +192,7 @@
                 <input type="text" placeholder="Max Price" value="" id="price" class="input">
                 <input type="text" placeholder="# Bedrooms" value="" id="bedrooms" class="input">
                 <input type="text" placeholder="# Bathrooms" value="" id="bathrooms" class="input">
-                <input type="text" placeholder="State" value="" id="state" class="input">
+                <input type="text" placeholder="State (example: MA)" value="" id="state" class="input">
                 <button class="button" onclick="filterHouses()">Search</button>
                 <button class="button" onclick="reset()">Reset</button>
             </div>
