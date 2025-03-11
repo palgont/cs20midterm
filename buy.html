@@ -34,7 +34,7 @@
 
             .sidebar {
                 width: 250px;
-                background-color: #e5e5e5;
+                background-color: #eeeeee;
                 padding-top: 20px;
                 display: flex;
                 flex-direction: column;
@@ -47,13 +47,21 @@
             .input {
                 margin: 10px;
                 padding: 10px;
-                border: 1px;
+                border: solid 1px #ccc;
                 border-radius: 5px;
             }
 
             .button {
                 margin: 10px;
                 padding: 6px;
+                border-radius: 5px;
+                background-color: #50affd;
+                color: white;
+                border: transparent;
+            }
+
+            .button:hover {
+                background-color: #008cba;
             }
 
             .sidebar_title {
@@ -71,12 +79,16 @@
             .house_card {
                 display: flex;
                 gap: 15px;
-                background-color: #eeeeee;
+                background: #f8f8f8;
                 padding: 10px;
                 border: 1px;
                 border-radius: 20px;
                 margin-bottom: 10px;
                 box-shadow: 0px 3px 5px #888888;
+            }
+
+            .house_card:hover {
+                background: #eeeeee;
             }
 
             @media (max-width: 768px) {
