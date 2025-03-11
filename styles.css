@@ -32,10 +32,12 @@ h1 {
 }
 nav {
         font-size: 20px;
-        font-family: "Open Sans";
+        font-family: "arial";
         display:flex;
         justify-content: center;
         background-color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
 }
 nav a{
         text-decoration: none;
@@ -52,17 +54,33 @@ nav a:hover{
     background-color: #000;
     height: 2px;
 }
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+}
 
-    nav a {
-        display: block;
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
         width: 100%;
         text-align: center;
-        padding: 12px;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 
