@@ -7,7 +7,7 @@ body {
 #top_bar { 
     width: 100%;
     position: fixed;
-    z-index :100 ;
+    z-index :100;
 }
 
 .wrapper {
@@ -44,12 +44,10 @@ nav a{
         color:#fff;
         padding: 10px 20px;
         font-weight: 400;
-        /* border-radius:5px; */
 }
 nav a:hover{
         background-color:#50affd;
         color:#fff;
-
 }
 #below_nav{ 
     width: 100%;
