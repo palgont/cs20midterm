@@ -8,6 +8,8 @@ body {
     width: 100%;
     /* position: fixed; */
     /* z-index :100 ; */
+    position: fixed;
+    z-index :100 ;
 }
 
 .wrapper {
@@ -64,6 +66,7 @@ footer {
     color: white;
     padding: 10px 0px;
     font-family: "Open Sans";
+   
     
 }
 footer p a{
@@ -125,5 +128,21 @@ footer p a:hover{
         padding: 10px 0;
         /* z-index: 150;
         overflow: hidden; */
+    }
+}
+
+@media(max-width: 450px) { 
+    header {
+      height: 80px;
+    }
+    .hamburger {
+        font-size: 30px;
+    }
+
+    #title{
+        font-size: 35px;
+    }
+    #img_container img{ 
+        width : 70px;
     }
 }
