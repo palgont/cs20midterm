@@ -64,7 +64,7 @@
             .imgDiv { 
                 margin : 72px 0px 0px  20px ; 
                 width : 350px; 
-                height: 350px;
+                height: 375px;
                 justify-content: center;
                 border: 2px solid  #50affd;
                 border-radius: 5px;
@@ -192,7 +192,7 @@
             @media(max-width: 1075px ){ 
                 .imgDiv { 
                     width : 345px; 
-                    height: 345px;
+                    height: 375px;
                     margin: 72px 0px 0px 10px; 
                     
                 }
@@ -202,7 +202,6 @@
                 }
 
                 #in_sidebar{ 
-                    
                     margin-bottom: 100px;
                     bottom: 100px;
                 }
@@ -272,14 +271,26 @@
             }
 
             @media (max-width: 490px) { 
+                #in { 
+                    margin: 0px;
+                }
+                #land_note { 
+                    top: 120px;
+                    margin-bottom: 0px;
+
+                }
+
+                #in_sidebar { 
+                    top: 180px;
+                }
 
                 #land_note span { 
                     font-size: 1em;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                 }
 
                 #land_note h1{ 
-                    margin-top: 60px;
+                    margin-top: 0px;
                     font-size: 30px;
                     margin-bottom: 10px;
                 }
@@ -404,6 +415,8 @@
                                     + "<br/>" +
                                     "<span class = 'address'>"+ houses[i].address.street + " " + 
                                     houses[i].address.city + " " + houses[i].address.state + "</span>"
+                                    + "<br/>" +
+                                    "<span class = 'bdrms'> "+ houses[i].bedrooms + " bedrooms</span>"
                                     + "</div>"
 
                                 + "</div>"

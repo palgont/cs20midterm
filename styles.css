@@ -128,3 +128,19 @@ footer p a:hover{
         overflow: hidden; */
     }
 }
+
+@media(max-width: 450px) { 
+    header {
+      height: 80px;
+    }
+    .hamburger {
+        font-size: 30px;
+    }
+
+    #title{
+        font-size: 35px;
+    }
+    #img_container img{ 
+        width : 70px;
+    }
+}
