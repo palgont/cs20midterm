@@ -10,14 +10,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Internal Stylesheet -->
     <style>
-  
-        /* header {
+        body {
+            overflow-x: hidden;
+        }
+        header {
             width:100%;
-        } */
+        }
         h1 {
             color: #000;
             font-size: 35px;
-            font-family: "Open Sans"
+            font-family: "DM Serif Text"
+        }
+        .slogan {
+            padding: 35px;
+            color:#000;
+            border:none;
+            font-family: "DM Serif Text";
+            background:#e4e4e4;
+            width: 100%;
+        }
+        .slogan h1 {
+            text-align: center;
+        }
+        .slogan p{
+            font-size:20px;
+            font-family: "Open Sans", sans-serif;
+            padding:0 15vw;
         }
         footer {
             display: flex;
@@ -29,7 +47,7 @@
             padding: 40px 20px;
             margin-bottom: 80px;
             text-align: center;
-            margin-top: 150px;
+            margin-top: 30px;
         }
         
         #agents_container {
@@ -51,11 +69,7 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.6s;
         }
-    
-        /* .agent_card:hover {
-            transform: rotateY(180deg);
-        } */
-    
+
         .agent_card img {
             width: 100px;
             height: 100px;
@@ -109,8 +123,18 @@
             </nav>
             <div id="below_nav"></div>
         </div>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="slogan">
+            <h1>Meet Our Agents</h1>
+            <p> At Property Path, we're building a new standard in real estate—one
+                that puts your dreams first. As a growing nationwide realty company,
+                we’re committed to connecting buyers and sellers with expert guidance, 
+                personalized service, and a seamless experience. Whether you're 
+                searching for your perfect home or looking to sell, we’re here to 
+                make your journey effortless and rewarding.
+            </p>
+        </div>
             <section id="agents_section">
-                <h1>Meet Our Agents</h1>
                 <div id="agents_container">
                     <!-- agent cards, showing agents and relevant information -->
                             <div class="agent_card">
@@ -193,7 +217,7 @@
                                 <p><strong>Email:</strong> <a href="mailto:plaicede@example.com">plaicede@example.com</a></p>
                                 <p><strong>Experience:</strong> 6 years</p>
                             </div>
-                        
+
                             <div class="agent_card">
                                 <img src="images/agents/agent10.png" alt="Ana Ise">
                                 <h3>Ana Ise</h3>
@@ -202,7 +226,34 @@
                                 <p><strong>Email:</strong> <a href="mailto:anaise@example.com">anaise@example.com</a></p>
                                 <p><strong>Experience:</strong> 13 years</p>
                             </div>
-                        </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent11.jpg" alt="Sarah Lee">
+                                <h3>Sarah Lee</h3>
+                                <p><strong>Location:</strong> Atlanta, GA</p>
+                                <p><strong>Phone:</strong> (444) 333-5678</p>
+                                <p><strong>Email:</strong> <a href="mailto:sarahlee@example.com">sarahlee@example.com</a></p>
+                                <p><strong>Experience:</strong> 10 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent12.jpg" alt="James Carter">
+                                <h3>James Carter</h3>
+                                <p><strong>Location:</strong> Seattle, WA</p>
+                                <p><strong>Phone:</strong> (555) 234-5678</p>
+                                <p><strong>Email:</strong> <a href="mailto:jamescarter@example.com">jamescarter@example.com</a></p>
+                                <p><strong>Experience:</strong> 11 years</p>
+                            </div>
+                        
+                            <div class="agent_card">
+                                <img src="images/agents/agent13.jpg" alt="Monica Cheng">
+                                <h3>Monica Cheng</h3>
+                                <p><strong>Location:</strong> Miami, FL</p>
+                                <p><strong>Phone:</strong> (666) 890-1234</p>
+                                <p><strong>Email:</strong> <a href="mailto:monicacheng@example.com">monicacheng@example.com</a></p>
+                                <p><strong>Experience:</strong> 8 years</p>
+                            </div>
+                    </div>
             </section>
     
             <script>
@@ -218,6 +269,9 @@
                         { name: "Olivia Martinez", location: "San Diego, CA", phone: "(666) 901-2345", email: "oliviamartinez@example.com", experience: "11 years", image: "images/agents/agent8.png" },
                         { name: "Plai Cede", location: "Dallas, TX", phone: "(777) 012-3456", email: "plaicede@example.com", experience: "6 years", image: "images/agents/agent9.png" },
                         { name: "Ana Ise", location: "San Jose, CA", phone: "(888) 123-4567", email: "anaise@example.com", experience: "13 years", image: "images/agents/agent10.png" }
+                        { name: "Sarah Lee", location: "Atlanta, GA", phone: "(444) 333-5678", email: "sarahlee@example.com", experience: "10 years", image: "images/agents/agent11.png" }
+                        { name: "James Carter", location: "Seattle, WA", phone: "(555) 234-5678", email: "jamescarter@example.com", experience: "11 years", image: "images/agents/agent12.png" }
+                        { name: "Monica Cheng", location: "Miami, FL", phone: "(666) 890-1234", email: "monicacheng@example.com", experience: "8 years", image: "images/agents/agent13.png" }
                     ];
     
                     let agentsHTML = "";
@@ -242,7 +296,7 @@
     </div> 
         <!-- Footer -->
         <footer>
-            <p>©PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
+            <p>©PropertyPath &nbsp;|&nbsp;+1(212)-616-6300 &nbsp;| 
                 &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
         </footer>
     </div>
