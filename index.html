@@ -77,36 +77,35 @@
             background-color: #0056b3;
         }
         </style>
-        <script>
-            function toggleMenu() {
-                document.querySelector('.nav-links').classList.toggle('show');
-            }
-        </script> 
+        
+        
     </head>
     <body>
         <!-- Header -->
-        <header>
-            <a href="index.html">
-                <div id = "img_container">
-                    <img id="logo" src="./images/house_logo.png">
+        <div id="top_bar">
+            <header>
+                <a href="index.html">
+                    <div id = "img_container">
+                        <img id="logo" src="./images/house_logo.png">
+                    </div>
+                </a>
+                <span id="title">PropertyPath</span>
+            </header>
+            <!-- Navagation Bar -->
+            <nav>
+                <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+                <div class="nav-links">
+                    <a href="index.html">Home </a>
+                    <a href="buy.html">Buy </a>
+                    <a href="rent.html">Rent</a>
+                    <a href="sell.html">Sell</a>
+                    <a href="agents.html">Agents</a>
+                    <a href="qanda.html">Q/A</a>
+                    <a href="contact.html">Contact Us</a>
                 </div>
-            </a>
-            <span id="title">PropertyPath</span>
-        </header>
-        <!-- Navagation Bar -->
-        <nav>
-            <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
-            <div class="nav-links">
-                <a href="index.html">Home </a>
-                <a href="buy.html">Buy </a>
-                <a href="rent.html">Rent</a>
-                <a href="sell.html">Sell</a>
-                <a href="agents.html">Agents</a>
-                <a href="qanda.html">Q/A</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-        </nav>
-        <div id = "below_nav"></div>
+            </nav>
+            <div id = "below_nav"></div>
+        </div>
         <section>
             <img src="./images/house_bg.jpg" alt="">
         </section>
@@ -148,4 +147,5 @@
                 &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
         </footer>
     </body>
+    <script src="script.js"></script>
 </html>

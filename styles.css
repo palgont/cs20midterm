@@ -6,7 +6,8 @@ body {
 }
 #top_bar { 
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
+    z-index :100 ;
 }
 
 .wrapper {
@@ -19,69 +20,41 @@ body {
 }
 header {
     font-family: "Open Sans";
-    background-color:#000;
+    background-color:#032030;
     align-items: center;
     justify-content: center;
+    text-align: center;
     display: flex;
-   
 }
 h1 {
     color: #000;
     font-size: 35px;
-    font-family: "Open Sans"
+    font-family: "DM Serif Text"
 }
 nav {
         font-size: 20px;
-        font-family: "arial";
+        font-family: "Open Sans";
         display:flex;
         justify-content: center;
-        background-color: #fff;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        background-color: #032030;
+        overflow: hidden;
 }
 nav a{
         text-decoration: none;
-        color:#000;
+        color:#fff;
         padding: 10px 20px;
-        font-weight: 250px;
+        font-weight: 400;
+        border-radius:3px;
 }
 nav a:hover{
         background-color:#50affd;
         color:#fff;
+
 }
 #below_nav{ 
     width: 100%;
     background-color: #000;
     height: 2px;
-}
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: black;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: white;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
 }
 
 footer {
@@ -108,4 +81,49 @@ footer p a:hover{
         text-align: center;
         color: #fff;
         Padding:0;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    z-index: 200;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    } */
+    .hamburger {
+        display:block;
+        background-color: #032030;
+        color:#fff;
+        font-size: 50px;
+    }
+    .nav-links.show {
+        display: flex; 
+    }
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        background-color: #032030;
+        /* position: absolute;
+        top: 50px;
+        left: 0; */
+        width: 100%;
+        padding: 10px 0;
+        /* z-index: 150;
+        overflow: hidden; */
+    }
 }

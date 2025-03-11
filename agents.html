@@ -5,14 +5,15 @@
         <!-- For JQuery usage -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!--Font Style-->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
         <!-- For responsiveness -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Internal Stylesheet -->
     <style>
-        header {
+  
+        /* header {
             width:100%;
-        }
+        } */
         h1 {
             color: #000;
             font-size: 35px;
@@ -48,12 +49,12 @@
             width: 300px;
             text-align: center;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.6s;
         }
     
         .agent_card:hover {
             color: white;
-            background-color: black;
+            background-color: #50affd;
         }
     
         .agent_card img {
@@ -83,11 +84,6 @@
             text-decoration: underline;
         }
         </style>
-        <script>
-            function toggleMenu() {
-                document.querySelector('.nav-links').classList.toggle('show');
-            }
-        </script> 
     </head>
     <body>
     <div class="wrapper">
@@ -120,6 +116,7 @@
             <section id="agents_section">
                 <h1>Meet Our Agents</h1>
                 <div id="agents_container">
+                    <!-- agent cards, showing agents and relevant information -->
                             <div class="agent_card">
                                 <img src="images/agents/agent1.jpg" alt="Ada Ugwu">
                                 <h3>Ada Ugwu</h3>
@@ -245,7 +242,6 @@
                 });
             </script>
         <section>
-            <!-- <img src="images/house_bg.jpg" alt=""> -->
         </section>
     </div> 
         <!-- Footer -->
@@ -254,7 +250,7 @@
                 &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
         </footer>
     </div>
-    
+    <script src="script.js"></script>
 
 
 </body></html>
