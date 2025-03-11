@@ -85,7 +85,8 @@ footer p a:hover{
 
 #title{
         font-size: 40px;
-        font-family: arial;
+        font-weight: 500;
+        font-family: "DM Serif Text";
         text-align: center;
         color: #fff;
         Padding:0;
