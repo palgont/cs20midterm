@@ -41,6 +41,7 @@
                 margin: 20px;
                 border-radius: 20px;
                 box-shadow: 0px 5px 12px #888888;
+                max-height: 425px;
             }
 
             .input {
@@ -178,13 +179,16 @@
         </header>
         <!-- Navagation Bar -->
         <nav>
-            <a href="index.html">Home </a>
-            <a href="buy.html">Buy </a>
-            <a href="rent.html">Rent</a>
-            <a href="sell.html">Sell</a>
-            <a href="agents.html">Agents</a>
-            <a href="qanda.html">Q/A</a>
-            <a href="contact.html">Contact Us</a>
+            <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+            <div class="nav-links">
+                <a href="index.html">Home </a>
+                <a href="buy.html">Buy </a>
+                <a href="rent.html">Rent</a>
+                <a href="sell.html">Sell</a>
+                <a href="agents.html">Agents</a>
+                <a href="qanda.html">Q/A</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
         </nav>
         <div id = "below_nav"></div>
         <div class="container">
@@ -210,4 +214,5 @@
                 &nbsp; <a href="mailto:propertypath@gmail.com">propertypath@gmail.com</a></p>
         </footer>
     </body>
+    <script src="script.js"></script>
 </html>

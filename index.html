@@ -228,25 +228,30 @@
     </head>
     <body>
         <!-- Header -->
-        <header>
-            <a href="index.html">
-                <div id = "img_container">
-                    <img id="logo" src="./images/house_logo.png">
+        <div id="top_bar">
+            <header>
+                <a href="index.html">
+                    <div id = "img_container">
+                        <img id="logo" src="./images/house_logo.png">
+                    </div>
+                </a>
+                <span id="title">PropertyPath</span>
+            </header>
+            <!-- Navagation Bar -->
+            <nav>
+                <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+                <div class="nav-links">
+                    <a href="index.html">Home </a>
+                    <a href="buy.html">Buy </a>
+                    <a href="rent.html">Rent</a>
+                    <a href="sell.html">Sell</a>
+                    <a href="agents.html">Agents</a>
+                    <a href="qanda.html">Q/A</a>
+                    <a href="contact.html">Contact Us</a>
                 </div>
-            </a>
-            <span id="title">PropertyPath</span>
-        </header>
-        <!-- Navagation Bar -->
-        <nav>
-            <a href="index.html">Home </a>
-            <a href="buy.html">Buy </a>
-            <a href="rent.html">Rent</a>
-            <a href="sell.html">Sell</a>
-            <a href="agents.html">Agents</a>
-            <a href="qanda.html">Q/A</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-        <div id = "below_nav"></div>
+            </nav>
+            <div id = "below_nav"></div>
+        </div>
         <section>
             <img src="./images/house_bg.jpg" alt="">
         </section>
@@ -407,4 +412,5 @@
             });
         </script>
     </body>
+    <script src="script.js"></script>
 </html>
