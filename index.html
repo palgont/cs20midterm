@@ -6,6 +6,8 @@
         <title>PropertyPath</title>
         <!-- Link to external style sheet -->
         <link rel="stylesheet" href="styles.css">
+        <!-- For Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/house_favicon.jpg">
         <!-- For JQuery usage -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
@@ -111,6 +113,7 @@
             top:60%;
             left:40%;
         }
+        /* Call to Action Cards Responsiveness */
         @media (max-width:1100px) {
             .card {
                 width:90%;
@@ -167,6 +170,8 @@
         .state-network {
             display:flex;
             justify-content:right;
+            text-align: left;
+            padding: 0px;
         }
         .split-list {
             list-style-type:disc;
@@ -177,16 +182,15 @@
         .slider-container {
             position: relative;
             width: 100%;
-            overflow: hidden; /* Hide images that go out of bounds */
+            overflow: hidden;
         }
 
         .slider-inner {
             display: flex;
-            transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+            transition: transform 0.7s ease; /* Smooth transition for sliding effect */
         }
 
         .slider-item {
-            width: 100%;
             object-fit: cover; /* Ensure images cover the area without distortion */
         }
 
@@ -216,14 +220,95 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* Responsiveness */
+        /* Slider Responsiveness */
         @media (max-width: 768px) {
             .slider-item {
                 width: 100%;
             }
         }
+        @media (max-width: 1100px) {
+            .slider-item {
+                flex: 0 0 50%; /* Show 2 images */
+            }
+        }
+
+        @media (max-width: 780px) {
+            .slider-item {
+                flex: 0 0 100%; /* Show 1 image */
+            }
+        }
+        .values {
+            padding: 35px;
+            background: #dddddd86;
+            border:none;
+            width:100%;
+        }
+        .values p{
+            font-size:20px;
+            font-family: "Open Sans", sans-serif;
+            margin-right: 60px;
+            padding: 0px 80px;
+        }
+        .value-cards {
+            display: grid;
+            grid-template-columns: 320px 320px 320px;
+            justify-content: center;
+            margin: 50px;
+        }
+        .value-card {
+            width:200px;
+            height:250px;
+            margin: 30px auto;
+            perspective: auto;
+            cursor:crosshair;
+        }
+        .value-card-inner {
+            position:relative;
+            width: 100%;
+            height:100%;
+            transition: transform 0.8s;
+            transform-style:preserve-3d;
+        }
+        .value-card:hover .value-card-inner {
+            transform: rotateY(180deg);
+        }
+        .value-card-front, .value-card-back {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+        }
+        .value-card-front {
+            background: #dddddd28;
+            border: 1px solid #e5e7eb;
+            font-size:25px;
+            font-family: "DM Serif Text";
+        }
+        .value-card-back {
+            background: #043651;
+            color: white;
+            transform: rotateY(180deg);
+            font-size:18px;
+            font-weight:500;
+            font-family: "Open Sans, san serif";
+            text-align: left;
+            padding: 20px;
+        }
+        @media (max-width: 1000px) {
+            .value-card {
+                width:70%;
+                flex-direction:row;
+            }
+            .value-cards{
+                grid-template-columns: 530px;
+                justify-content: center;
+            }
+        }
         </style>
-        
         
     </head>
     <body>
@@ -256,6 +341,7 @@
             <img src="./images/house_bg.jpg" alt="">
         </section>
         <!-- Below Top Bar -->
+        <!-- Slogan & Description -->
         <div class="slogan">
             <h1>Your Dream Home, Our Mission</h1>
             <p> At Property Path, we're building a new standard in real estate—one
@@ -359,6 +445,47 @@
             </div>
             <button class="next">→</button>
         </div>
+        <!-- Slogan & Description -->
+        <div class="values">
+            <h1>Our Values</h1>
+            <p> At PropertyPath, our core values of integrity, transparency, and
+                client-first service drive us to build lasting relationships and
+                deliver exceptional real estate experiences with trust and respect.
+            </p>
+        </div>
+        <!-- Value Cards -->
+        <div class="value-cards">
+            <div class="value-card">
+                <div class="value-card-inner">
+                <div class="value-card-front">Integrity</div>
+                <div class="value-card-back">Integrity is essential to
+                    us at PropertyPath because it ensures we build trust,
+                    foster transparent relationships, and always act in the best
+                    interest of our clients.
+                </div>
+                </div>
+            </div>
+            <div class="value-card">
+                <div class="value-card-inner">
+                <div class="value-card-front">Transparency</div>
+                <div class="value-card-back">Transparency is important to us at
+                    PropertyPath because it fosters trust, ensures clear communication,
+                    and empowers our clients to make informed decisions throughout
+                    their real estate journey.
+                </div>
+                </div>
+            </div>
+            <div class="value-card">
+                <div class="value-card-inner">
+                <div class="value-card-front">Client-First</div>
+                <div class="value-card-back">Being client-first is at the heart of
+                    PropertyPath, as we prioritize our clients' needs, ensuring
+                    they receive personalized service and the best possible outcomes
+                    at every step of their real estate journey.
+                </div>
+                </div>
+            </div>
+        </div>
         <!-- Footer -->
         <footer>
             <p>©PropertyPath &nbsp;|&nbsp;+1(212)-616-6300 &nbsp;| 
@@ -367,48 +494,64 @@
         <script>
             $(document).ready(function () {
                 var currentIndex = 0;
-                var imageWidth = 500; // Each image is exactly 500px wide
-                var totalImages = 6; // Fixed number of images
-                var visibleImages = Math.floor($('.slider-container').width() / imageWidth); 
-                var maxIndex = Math.max(0, totalImages - visibleImages); // Prevent negative values
+                var totalImages = $('.slider-item').length;
+                
+                function getVisibleImages() {
+                    let width = $(window).width();
+                    if (width <= 768) {
+                        return 1;
+                    } else if (width <= 1100) {
+                        return 2;
+                    } else {
+                        return 3;
+                    }
+                }
 
-                function updateSliderPosition() {
+                function updateSlider() {
+                    var visibleImages = getVisibleImages();
+                    var containerWidth = $('.slider-container').width();
+                    var imageWidth = containerWidth / visibleImages;
+
+                    // Set the exact width for each image
+                    $('.slider-item').css('width', imageWidth + 'px');
+
+                    var maxIndex = Math.max(0, totalImages - visibleImages);
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex; // Prevent index from exceeding bounds
+                    }
+
                     var newTransformValue = -currentIndex * imageWidth;
                     $('.slider-inner').css('transform', 'translateX(' + newTransformValue + 'px)');
                 }
 
-                function updateVisibleImages() {
-                    visibleImages = Math.floor($('.slider-container').width() / imageWidth);
-                    maxIndex = Math.max(0, totalImages - visibleImages); // Ensure valid maxIndex
-                    if (currentIndex > maxIndex) {
-                        currentIndex = maxIndex; // Prevent out-of-bounds index
-                    }
-                    updateSliderPosition();
-                }
-
                 $('.next').click(function () {
+                    var visibleImages = getVisibleImages();
+                    var maxIndex = Math.max(0, totalImages - visibleImages);
+
                     if (currentIndex < maxIndex) {
                         currentIndex++;
                     } else {
-                        currentIndex = 0; // Loop back to the start without blank space
+                        currentIndex = 0; // Loop to start
                     }
-                    updateSliderPosition();
+                    updateSlider();
                 });
 
                 $('.prev').click(function () {
+                    var visibleImages = getVisibleImages();
+                    var maxIndex = Math.max(0, totalImages - visibleImages);
+
                     if (currentIndex > 0) {
                         currentIndex--;
                     } else {
-                        currentIndex = maxIndex; // Loop back to the last fully visible set
+                        currentIndex = maxIndex; // Loop to end
                     }
-                    updateSliderPosition();
+                    updateSlider();
                 });
 
-                // Adjust on window resize
-                $(window).resize(updateVisibleImages);
+                $(window).resize(updateSlider);
 
-                // Initial setup
-                updateVisibleImages();
+                // Initialize
+                updateSlider();
             });
         </script>
     </body>

@@ -1,10 +1,15 @@
+<!DOCTYPE html>
 <html><head>
         <title>PropertyPath</title>
         <!-- Link to external style sheet -->
         <link rel="stylesheet" href="styles.css">
+        <!-- For Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/house_favicon.jpg">
         <!-- For JQuery usage -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <!--Font Style-->
+        <!--Font Styles-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
         <!-- For responsiveness -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +17,9 @@
     <style>
         body {
             overflow-x: hidden;
+            /* padding-top: 80px; */
         }
-        header {
-            width:100%;
-        }
+
         h1 {
             color: #000;
             font-size: 35px;
@@ -28,14 +32,17 @@
             font-family: "DM Serif Text";
             background:#e4e4e4;
             width: 100%;
+            /* z-index: 1000; */
+            /* position:fixed; */
         }
         .slogan h1 {
             text-align: center;
+            padding-top: 110px;
         }
         .slogan p{
             font-size:20px;
             font-family: "Open Sans", sans-serif;
-            padding:0 15vw;
+            padding:0 10vw;
         }
         footer {
             display: flex;
@@ -47,7 +54,7 @@
             padding: 40px 20px;
             margin-bottom: 80px;
             text-align: center;
-            margin-top: 30px;
+            /* margin-top: 150px; */
         }
         
         #agents_container {
@@ -69,6 +76,12 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.6s;
         }
+    
+        .agent_card:hover {
+            color: white;
+            background-color: #50affd;
+        }
+    
         .agent_card img {
             width: 100px;
             height: 100px;
@@ -98,8 +111,6 @@
         </style>
     </head>
     <body>
-    <div class="wrapper">
-        <div class="content">
         <div id="top_bar">
             <!-- Header -->
             <header>
@@ -125,7 +136,8 @@
             </nav>
             <div id="below_nav"></div>
         </div>
-        <br><br><br><br><br><br><br><br><br>
+        
+        <!-- <div class="content"> -->
         <div class="slogan">
             <h1>Meet Our Agents</h1>
             <p> At Property Path, we're building a new standard in real estate—one
@@ -295,7 +307,7 @@
             </script>
         <section>
         </section>
-    </div> 
+    <!-- </div>  -->
         <!-- Footer -->
         <footer>
             <p>©PropertyPath &nbsp;|&nbsp;+1(212)-616-6300 &nbsp;| 
