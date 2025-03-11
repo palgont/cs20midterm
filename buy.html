@@ -5,6 +5,8 @@
         <title>Buy Housing</title>
         <!-- Link to external style sheet -->
         <link rel="stylesheet" href="styles.css">
+        <!-- For Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/house_favicon.jpg">
         <!-- For JQuery usage -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
@@ -34,11 +36,11 @@
 
             .sidebar {
                 width: 250px;
-                background-color: #e5e5e5;
+                background-color: #eeeeee;
                 padding-top: 20px;
                 display: flex;
                 flex-direction: column;
-                margin: 20px;
+                margin: 130px 0px 20px 20px;
                 border-radius: 20px;
                 box-shadow: 0px 5px 12px #888888;
                 max-height: 425px;
@@ -47,17 +49,25 @@
             .input {
                 margin: 10px;
                 padding: 10px;
-                border: 1px;
+                border: solid 1px #ccc;
                 border-radius: 5px;
+                border: 1px solid #ccc;
             }
 
             .button {
                 margin: 10px;
                 padding: 6px;
+                border-radius: 5px;
+                background-color: #50affd;
+                color: white;
+                border: transparent;
+            }
+
+            .button:hover {
+                background-color: #008cba;
             }
 
             .sidebar_title {
-                color: black;
                 margin-left: 10px;
                 font-family: arial;
                 text-align: center;
@@ -71,12 +81,16 @@
             .house_card {
                 display: flex;
                 gap: 15px;
-                background-color: #eeeeee;
+                background: #f8f8f8;
                 padding: 10px;
                 border: 1px;
                 border-radius: 20px;
                 margin-bottom: 10px;
                 box-shadow: 0px 3px 5px #888888;
+            }
+
+            .house_card:hover {
+                background: #eeeeee;
             }
 
             @media (max-width: 768px) {
