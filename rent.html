@@ -113,8 +113,8 @@
 
             #in_sidebar{ 
                 width: 20%;
-                height: 250px;
-                top: 325px;
+                height: 35vh;
+                top: 326px;
                 left: 20px;
                 border: 2px solid #50affd;
                 padding: 35px 10px;
@@ -123,8 +123,6 @@
                 box-shadow: -5px -5px 10px #888888;
                 position: fixed;
                 bottom: 100px;
-                
-                
             }
 
             #in_sidebar:hover { 
@@ -196,6 +194,7 @@
                     width : 345px; 
                     height: 345px;
                     margin: 72px 0px 0px 10px; 
+                    
                 }
                 .img { 
                     width: 315px;
@@ -308,8 +307,20 @@
             }
         </style>        
     </head>
+    <script>
+        function toggleMenu() {
+            $(".nav-links").toggleClass("active");
+
+            if ($(".nav-links").hasClass("active")) {
+                $(".nav-links").css({ "position": "absolute", "z-index": "1200", "top": "50px", "left": "0", "width": "100%" });
+            } else {
+                $(".nav-links").css({ "position": "relative" });
+            }
+        }
+
+    </script>
     <body>
-     
+    
 
         <!-- Header -->
         <div id="top_bar">
@@ -323,13 +334,16 @@
             </header>
             <!-- Navagation Bar -->
             <nav>
-                <a href="index.html">Home </a>
-                <a href="buy.html">Buy </a>
-                <a href="rent.html">Rent</a>
-                <a href="sell.html">Sell</a>
-                <a href="agents.html">Agents</a>
-                <a href="qanda.html">Q/A</a>
-                <a href="contact.html">Contact Us</a>
+                <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+                <div class="nav-links">
+                    <a href="index.html">Home </a>
+                    <a href="buy.html">Buy </a>
+                    <a href="rent.html">Rent</a>
+                    <a href="sell.html">Sell</a>
+                    <a href="agents.html">Agents</a>
+                    <a href="qanda.html">Q/A</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
             </nav>
             <div id = "below_nav"></div>
         </div>
@@ -355,11 +369,6 @@
                        
 
                     </div>
-                    <div id="space_below">
-                    </div>
-                    <br>  <br> 
-                    <br>  <br> 
-                    <br>  <br>  
                     
 
                 </div>
@@ -452,9 +461,10 @@
 
         <!-- Footer -->
         <footer>
-            <p>PropertyPath &nbsp;|&nbsp;+1(###)-###-#### &nbsp;| 
+            <p>©PropertyPath &nbsp;|&nbsp;+1(212)-616-6300 &nbsp;| 
                 &nbsp; <a href="mailto:propertypath@gmail.com">
                     propertypath@gmail.com</a></p>
         </footer>
     </body>
+    <script src="script.js"></script>
 </html>
