@@ -9,8 +9,10 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous"></script>
-        <!--Font Style-->
+        <!--Font Styles-->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
         rel="stylesheet">
         <!-- For responsiveness -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,10 +164,6 @@
                     }
                 });
             }
-
-            function toggleMenu() {
-                document.querySelector('.nav-links').classList.toggle('show');
-            }
         </script>
     </head>
     <body>
@@ -180,16 +178,13 @@
         </header>
         <!-- Navagation Bar -->
         <nav>
-            <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
-            <div class="nav-links">
-                <a href="index.html">Home </a>
-                <a href="buy.html">Buy </a>
-                <a href="rent.html">Rent</a>
-                <a href="sell.html">Sell</a>
-                <a href="agents.html">Agents</a>
-                <a href="qanda.html">Q/A</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
+            <a href="index.html">Home </a>
+            <a href="buy.html">Buy </a>
+            <a href="rent.html">Rent</a>
+            <a href="sell.html">Sell</a>
+            <a href="agents.html">Agents</a>
+            <a href="qanda.html">Q/A</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
         <div id = "below_nav"></div>
         <div class="container">
@@ -216,4 +211,3 @@
         </footer>
     </body>
 </html>
-
