@@ -23,6 +23,9 @@ header {
     text-align: center;
     display: flex;
 }
+header a {
+    text-decoration: none;
+}
 h1 {
     color: #000;
     font-size: 35px;

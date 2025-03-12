@@ -320,7 +320,7 @@
                         <img id="logo" src="./images/house_logo.png">
                     </div>
                 </a>
-                <span id="title">PropertyPath</span>
+                <a href="index.html"><span id="title">PropertyPath</span></a>
             </header>
             <!-- Navagation Bar -->
             <nav>
@@ -529,7 +529,7 @@
                     var newTransformValue = -currentIndex * imageWidth;
                     $('.slider-inner').css('transform', 'translateX(' + newTransformValue + 'px)');
                 }
-                
+
                 $('.next').click(function () {
                     var visibleImages = getVisibleImages();
                     var maxIndex = Math.max(0, totalImages - visibleImages);
