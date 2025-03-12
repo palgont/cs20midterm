@@ -181,6 +181,14 @@
             footer{ 
                 bottom : 0px ;
             }
+
+            #apology { 
+                align-items: center;
+                text-align: center;
+                margin: 100px auto;
+                font-size: 1.5em;
+            }
+
             @media(max-width: 1075px ){ 
                 .imgDiv { 
                     width : 345px; 
@@ -360,15 +368,15 @@
         <section id="first">
                 <div id="sidebar">
                     <div id="in_sidebar">
-                        <span>Price Range:</span> <br/>
-                        <input type="text" placeholder="Min price" id="min_p">
-                        <input type="text" placeholder="Max price" id="max_p">
-                        <input type="text" placeholder="# Bedrooms" class="input" id="num_bdrms">
-                        <!-- <input type="text" placeholder="# Stories" class="input" id="num_stories"> -->
-                        <input type="text" placeholder="Location" class="input" id="location">
-                        <button id="search" class="input" >Search</button>
-                    
-                        <!-- We probablly want to call an API for location -->
+                        <form action="#" id="form">
+                            <span>Price Range:</span> <br/>
+                            <input type="text" placeholder="Min price" id="min_p" >
+                            <input type="text" placeholder="Max price" id="max_p">
+                            <input type="text" placeholder="# Bedrooms" class="input" id="num_bdrms">
+                            <input type="text" placeholder="Location" class="input" id="location">
+                            <button id="search" class="input" >Search</button>
+                        </form>
+                   
                        
 
                     </div>
@@ -433,34 +441,52 @@
                     var location = $("#location").val();
                     console.log("here")
                     console.log(min_price)
-
+                    var houses_found = 0;
                     for (var i = 0; i < houses.length; i++) { 
-                        if ((houses[i].sellOrRent == "rent") && 
-                            // (houses[i].price >= min_price) && 
-                            // (houses[i].price <= max_price) && 
-                            // (houses[i].bedrooms == num_bdrms) &&
-                            (location !== "" && (houses[i].address.city == location || 
+                        var showhouse = false; 
+                        if (houses[i].sellOrRent == "rent"){ 
+                            if (location != "" && (houses[i].address.city == location || 
                              houses[i].address.state == location || 
                              houses[i].address.street == location || 
-                             houses[i].address.zip == location)) &&
-                            (min_price !== "" && houses[i].price >= min_price) &&
-                            (max_price !== "" && houses[i].price <= max_price) &&
-                            (num_bdrms !== "" && houses[i].bedrooms == num_bdrms)) {
+                             houses[i].address.zip == location)) { 
+                                showhouse = true;
+                            } 
 
-                            console.log("Right in if")
-                            $("#imgDiv" + i).css({"display":"block"});
-                            console.log(houses[i].price)
-                            console.log(min_price)
+                            if (min_price != "" && houses[i].price >= min_price) { 
+                                showhouse = true;
+                            }
+
+                            if (max_price != "" && houses[i].price <= max_price) { 
+                               showhouse = true;
+                            } 
+
+                            if (num_bdrms != "" && houses[i].bedrooms == num_bdrms) { 
+                               showhouse = true;
+                            } 
+
+                            if(showhouse){ 
+                                $("#imgDiv" + i).css({"display":"block"});
+                                houses_found ++;
+
+                            } else { 
+                                $("#imgDiv" + i).css({"display":"none"});
+                            }
+
                         } else { 
-                            console.log("Right in else")
                             $("#imgDiv" + i).css({"display":"none"});
-                        }
-                        // console.log("Right in if")
+                        }                   
 
                     }
-                    console.log(min_price,max_price,num_bdrms,location );
+                    if (houses_found == 0) { 
+                         $("#main").html("<div id = 'apology'> Apologies! we could not find a house in that category.</div>");
+                    }
+
+                    // Reset the form (if it's a form element)
+                     $("#form")[0].reset();
                 }
-                    
+                
+               
+                                
             })
         </script>
 

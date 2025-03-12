@@ -31,7 +31,7 @@
         "bathrooms": 4,
         "squareFeet": 3000,
         "amenities": ["beachfront", "solar panels", "home theater"],
-        "image": "images/Houses/house3.png"
+        "image": "images/Houses/house3.jpg"
       },
       {
         "id": 4,
@@ -42,7 +42,7 @@
         "bathrooms": 2,
         "squareFeet": 1400,
         "amenities": ["rooftop terrace", "smart home features"],
-        "image": "images/Houses/house4.png"
+        "image": "images/Houses/house4.jpg"
       },
       {
         "id": 5,
@@ -53,7 +53,7 @@
         "bathrooms": 1,
         "squareFeet": 1200,
         "amenities": ["gym", "concierge service"],
-        "image": "images/Houses/house5.png"
+        "image": "images/Houses/house5.jpg"
       },
       {
         "id": 6,
@@ -64,7 +64,7 @@
         "bathrooms": 2,
         "squareFeet": 1900,
         "amenities": ["deck", "energy-efficient appliances"],
-        "image": "images/Houses/house6.png"
+        "image": "images/Houses/house6.jpg"
       },
       {
         "id": 7,
@@ -75,7 +75,7 @@
         "bathrooms": 3,
         "squareFeet": 2500,
         "amenities": ["mountain view", "heated floors"],
-        "image": "images/Houses/house7.png"
+        "image": "images/Houses/house7.jpg"
       },
       {
         "id": 8,
@@ -86,7 +86,7 @@
         "bathrooms": 2,
         "squareFeet": 1700,
         "amenities": ["outdoor kitchen", "fire pit"],
-        "image": "images/Houses/house8.png"
+        "image": "images/Houses/house8.jpg"
       },
       {
         "id": 9,
@@ -97,7 +97,7 @@
         "bathrooms": 2,
         "squareFeet": 1600,
         "amenities": ["community pool", "clubhouse"],
-        "image": "images/Houses/house9.png"
+        "image": "images/Houses/house9.jpg"
       },
       {
         "id": 10,
@@ -108,7 +108,7 @@
         "bathrooms": 3,
         "squareFeet": 2300,
         "amenities": ["sauna", "private garden"],
-        "image": "images/Houses/house10.png"
+        "image": "images/Houses/house10.jpg"
       },
       {
         "id": 11,
@@ -119,7 +119,7 @@
         "bathrooms": 3,
         "squareFeet": 2200,
         "amenities": ["game room", "fenced yard"],
-        "image": "images/Houses/house11.png"
+        "image": "images/Houses/house11.jpg"
       },
       {
         "id": 12,
@@ -130,7 +130,7 @@
         "bathrooms": 4,
         "squareFeet": 3200,
         "amenities": ["home office", "guest house"],
-        "image": "images/Houses/house12.png"
+        "image": "images/Houses/house12.jpg"
       },
       {
         "id": 13,
@@ -141,7 +141,7 @@
         "bathrooms": 2,
         "squareFeet": 1500,
         "amenities": ["music studio", "pet-friendly"],
-        "image": "images/Houses/house13.png"
+        "image": "images/Houses/house13.jpg"
       },
       {
         "id": 14,
@@ -152,7 +152,7 @@
         "bathrooms": 3,
         "squareFeet": 2800,
         "amenities": ["wine cellar", "home gym"],
-        "image": "images/Houses/house14.png"
+        "image": "images/Houses/house14.jpg"
       },
       {
         "id": 15,
@@ -163,7 +163,7 @@
         "bathrooms": 2,
         "squareFeet": 2000,
         "amenities": ["solar panels", "large backyard"],
-        "image": "images/Houses/house15.png"
+        "image": "images/Houses/house15.jpg"
       },
       {
         "id": 16,
@@ -174,7 +174,7 @@
         "bathrooms": 2,
         "squareFeet": 1400,
         "amenities": ["heated garage", "smart home system"],
-        "image": "images/Houses/house16.png"
+        "image": "images/Houses/house16.jpg"
       },
       {
         "id": 17,
@@ -185,7 +185,7 @@
         "bathrooms": 3,
         "squareFeet": 2400,
         "amenities": ["fire pit", "open floor plan"],
-        "image": "images/Houses/house17.png"
+        "image": "images/Houses/house17.jpg"
       },
       {
         "id": 18,
@@ -196,7 +196,7 @@
         "bathrooms": 2,
         "squareFeet": 1700,
         "amenities": ["rooftop deck", "walk-in closets"],
-        "image": "images/Houses/house18.png"
+        "image": "images/Houses/house18.jpg"
       },
       {
         "id": 19,
@@ -207,7 +207,7 @@
         "bathrooms": 2.5,
         "squareFeet": 2100,
         "amenities": ["home office", "two-car garage"],
-        "image": "images/Houses/house19.png"
+        "image": "images/Houses/house19.jpg"
       },
       {
         "id": 20,
@@ -218,7 +218,7 @@
         "bathrooms": 2,
         "squareFeet": 1350,
         "amenities": ["gated community", "community pool"],
-        "image": "images/Houses/house20.png"
+        "image": "images/Houses/house20.jpg"
       },
       
       {
@@ -230,7 +230,7 @@
         "bathrooms": 1,
         "squareFeet": 1200,
         "amenities": ["balcony", "gym", "pet-friendly"],
-        "image": "images/Houses/house21.png"
+        "image": "images/Houses/house21.jpg"
       },
 
       {
@@ -242,7 +242,7 @@
         "bathrooms": 3,
         "squareFeet": 2500,
         "amenities": ["garage", "backyard", "fire pit"],
-        "image": "images/Houses/house22.png"
+        "image": "images/Houses/house22.jpg"
       },
       {
         "id": 23,
@@ -253,7 +253,7 @@
         "bathrooms": 2,
         "squareFeet": 1500,
         "amenities": ["rooftop access", "doorman", "modern kitchen"],
-        "image": "images/Houses/house23.png"
+        "image": "images/Houses/house23.jpg"
       },
       {
         "id": 24,
@@ -264,7 +264,7 @@
         "bathrooms": 4,
         "squareFeet": 3000,
         "amenities": ["pool", "deck", "home office"],
-        "image": "images/Houses/house24.png"
+        "image": "images/Houses/house24.jpg"
       },
       {
         "id": 25,
@@ -275,7 +275,7 @@
         "bathrooms": 2,
         "squareFeet": 1800,
         "amenities": ["garden", "shed", "patio"],
-        "image": "images/Houses/house25.png"
+        "image": "images/Houses/house25.jpg"
       },
       {
         "id": 26,
@@ -286,7 +286,7 @@
         "bathrooms": 2,
         "squareFeet": 1300,
         "amenities": ["fireplace", "mountain view", "community pool"],
-        "image": "images/Houses/house26.png"
+        "image": "images/Houses/house26.jpg"
       },
       {
         "id": 27,
@@ -297,7 +297,7 @@
         "bathrooms": 3,
         "squareFeet": 2600,
         "amenities": ["finished basement", "sunroom", "hardwood floors"],
-        "image": "images/Houses/house27.png"
+        "image": "images/Houses/house27.jpg"
       },
       {
         "id": 29,
@@ -308,7 +308,7 @@
         "bathrooms": 2,
         "squareFeet": 1100,
         "amenities": ["gym", "concierge", "city view"],
-        "image": "images/Houses/house29.png"
+        "image": "images/Houses/house29.jpg"
       },
       {
         "id": 30,
@@ -319,7 +319,7 @@
         "bathrooms": 2,
         "squareFeet": 1900,
         "amenities": ["garage", "garden", "solar panels"],
-        "image": "images/Houses/house30.png"
+        "image": "images/Houses/house30.jpg"
       }
     ]
   }
