@@ -12,11 +12,6 @@ body {
     z-index :100;
 }
 
-/* .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
 .content {
     flex-grow: 1;
 }
@@ -27,6 +22,9 @@ header {
     justify-content: center;
     text-align: center;
     display: flex;
+}
+header a {
+    text-decoration: none;
 }
 h1 {
     color: #000;
@@ -40,6 +38,7 @@ nav {
         justify-content: center;
         background-color: #032030;
         overflow: hidden;
+        padding:10px;
 }
 nav a{
         text-decoration: none;
@@ -100,12 +99,6 @@ footer p a:hover{
         align-items: center;
     }
 
-    /* nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-    } */
     .hamburger {
         display:block;
         background-color: #032030;
